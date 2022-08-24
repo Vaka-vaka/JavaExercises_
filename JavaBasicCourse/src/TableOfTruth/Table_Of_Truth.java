@@ -1,3 +1,5 @@
+package TableOfTruth;
+
 /**
  * A program that prints <code>TableOfTruth</code>
  *
@@ -5,7 +7,7 @@
  * @version 1.0
  */
 
-public class TableOfTruth {
+public class Table_Of_Truth {
     /**
      * Program entry point.
      * @param args command Line arguments

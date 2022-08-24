@@ -1,3 +1,5 @@
+package TableOfTruth;
+
 /**
  * A program that prints <code>TableOfTruth</code>
  *
