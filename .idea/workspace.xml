@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71fd8f69-c62a-4c5a-a060-099e551e9c8e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaBasicCourse/src/PrimitiveTypes/BooleanExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasicCourse/src/PrimitiveTypes/BooleanExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java" afterDir="false" />
+    <list default="true" id="71fd8f69-c62a-4c5a-a060-099e551e9c8e" name="Changes" comment="BooleanExpression">
+      <change beforePath="$PROJECT_DIR$/out/production/JavaExercises/PrimitiveTypes/BooleanExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaExercises/PrimitiveTypes/BooleanExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaExercises/TableOfTruth/TableOfTruth_Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaExercises/TableOfTruth/TableOfTruth_Task.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,8 +103,16 @@
       <option name="presentableId" value="Default" />
       <updated>1661367356085</updated>
       <workItem from="1661367357369" duration="3018000" />
-      <workItem from="1661433757935" duration="5134000" />
+      <workItem from="1661433757935" duration="5997000" />
     </task>
+    <task id="LOCAL-00001" summary="BooleanExpression">
+      <created>1661454755086</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661454755086</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,35 +129,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="BooleanExpression" />
+    <option name="LAST_COMMIT_MESSAGE" value="BooleanExpression" />
   </component>
 </project>
