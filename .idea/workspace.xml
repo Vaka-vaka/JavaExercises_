@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="71fd8f69-c62a-4c5a-a060-099e551e9c8e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaBasicCourse/src/PrimitiveTypes/BooleanExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasicCourse/src/PrimitiveTypes/BooleanExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,19 +32,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "W:/IT/Intelli IDEA(save projects)/JavaExercises/TableOfTruth",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;W:/IT/Intelli IDEA(save projects)/JavaExercises/TableOfTruth&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="W:\IT\Intelli IDEA(save projects)\JavaExercises\TableOfTruth" />
@@ -51,7 +53,7 @@
       <recent name="W:\IT\Intelli IDEA(save projects)\JavaExercises\TableOfTruth\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BooleanExpression">
+  <component name="RunManager" selected="Application.TableOfTruth_Task">
     <configuration name="BooleanExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PrimitiveTypes.BooleanExpression" />
       <module name="JavaExercises" />
@@ -72,10 +74,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Table_Of_Truth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TableOfTruth.Table_Of_Truth" />
+      <module name="JavaExercises" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TableOfTruth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BooleanExpression" />
         <item itemvalue="Application.TableOfTruth_Task" />
+        <item itemvalue="Application.BooleanExpression" />
+        <item itemvalue="Application.Table_Of_Truth" />
       </list>
     </recent_temporary>
   </component>
@@ -88,6 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1661367356085</updated>
       <workItem from="1661367357369" duration="3018000" />
+      <workItem from="1661433757935" duration="5134000" />
     </task>
     <servers />
   </component>
@@ -104,5 +121,36 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaBasicCourse/src/TableOfTruth/TableOfTruth_Task.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
