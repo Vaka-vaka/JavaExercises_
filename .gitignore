@@ -1,0 +1,6 @@
+
+*.class
+JavaBasicCourse/src/out/production/JavaBasicCourse/JavaBasicCourse.iml
+*.xml
+*.iml
+*.patch
