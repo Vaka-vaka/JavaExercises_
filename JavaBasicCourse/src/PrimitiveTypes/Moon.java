@@ -18,8 +18,8 @@ public class Moon {
      */
     public static void main(String[] args) {
         double weight_Moon;
-        double weight = 106.6;
-        weight_Moon = (weight * 0.17);
-        System.out.println("My weight on the moon - " + weight_Moon + " kg.");
+         double weight = 106.6;
+          weight_Moon = (weight * 0.17);
+           System.out.println("My weight on the moon - " + weight_Moon + " kg.");
     }
 }
