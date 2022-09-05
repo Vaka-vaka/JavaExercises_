@@ -25,7 +25,25 @@ public class InchesIntoMeters {
                 System.out.println(inch + " дюйм" + " = " + meter + " метрa");
             if(counter == 2)
                 System.out.println(inch + " дюйм" + a + " = " + meter + " метрa");
+            if(counter == 3)
+                System.out.println(inch + " дюйм" + a + " = " + meter + " метрa");
+            if(counter == 4)
+                System.out.println(inch + " дюйм" + a + " = " + meter + " метрa");
             if(counter == 5)
+                System.out.println(inch + " дюймов" + " = " + meter + " метрa");
+            if(counter == 6)
+                System.out.println(inch + " дюймов" + " = " + meter + " метрa");
+            if(counter == 7)
+                System.out.println(inch + " дюймов" + " = " + meter + " метрa");
+            if(counter == 8)
+                System.out.println(inch + " дюймов" + " = " + meter + " метрa");
+            if(counter == 9)
+                System.out.println(inch + " дюймов" + " = " + meter + " метрa");
+            if(counter == 10)
+                System.out.println(inch + " дюймов" + " = " + meter + " метрa");
+            if(counter == 11)
+                System.out.println(inch + " дюймов" + " = " + meter + " метрa");
+            if(counter == 12)
                 System.out.println(inch + " дюймов" + " = " + meter + " метрa");
 
            //System.out.println(inch + " дюйм" + a + " = " + meter + " метрa");
