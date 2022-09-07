@@ -8,7 +8,7 @@
 /*Сила тяжести на Луне составляет около 17% земной. Напишите программу,
 которая вычислила бы ваш вес на Луне.*/
 
-package PrimitiveTypes;
+package primitiveTypes;
 
 public class Moon {
     /**

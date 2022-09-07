@@ -1,4 +1,4 @@
-package TableOfTruth;
+package tableOfTruth;
 
 /**
  * A program that prints <code>TableOfTruth</code>

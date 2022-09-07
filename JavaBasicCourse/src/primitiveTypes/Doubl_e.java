@@ -1,4 +1,4 @@
-package PrimitiveTypes;
+package primitiveTypes;
 
 public class Doubl_e {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package PrimitiveTypes;
+package primitiveTypes;
 /*Никакой высшей математики - школьный курс, класс эдак 5-6:
 a + b = c - переносим с влево
 a + b - c = 0

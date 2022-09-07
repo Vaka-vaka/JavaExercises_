@@ -1,4 +1,4 @@
-package PrimitiveTypes;
+package primitiveTypes;
 
 public class BooleanExpression {
     public static void main(String[] args) throws Exception {

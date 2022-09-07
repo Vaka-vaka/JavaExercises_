@@ -1,4 +1,4 @@
-package PrimitiveTypes;
+package primitiveTypes;
 
 public class EncodingRarZip {
 

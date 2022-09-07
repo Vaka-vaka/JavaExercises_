@@ -6,7 +6,7 @@
  * @version 1.0
  */
 
-package PrimitiveTypes;
+package primitiveTypes;
 
 public class IfDemo {
     /**

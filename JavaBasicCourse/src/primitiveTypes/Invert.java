@@ -1,4 +1,4 @@
-package PrimitiveTypes;
+package primitiveTypes;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -6,7 +6,7 @@
  * @version 1.0
  */
 
-package Сhapter_2;
+package chapter_2;
 
 public class Pythagoras_theorem {
     /**
@@ -22,6 +22,5 @@ public class Pythagoras_theorem {
         этого метода, также представленного типом douЫe. */
         z = Math.sqrt(x*x + y*y);
         System.out.println("Длинa гипотенузы : " + z);
-
     }
 }
