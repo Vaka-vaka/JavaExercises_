@@ -18,7 +18,6 @@ public class GuessЗ {
     public static void main(String[] args) throws IOException {
         char ch, answer = 'K';
 
-
         System.out.println("Зaдyмaнa буква из диапазона A- Z.");
         System.out.println("Пoпытaйтecь ее угадать : ");
         ch = (char) System.in.read();
