@@ -29,9 +29,9 @@ public class Guess4 {
             }while (ignore != '\n');  //+
 
             if(ch == answer){
-                System.out.println("** Правиль но ! **");
+                System.out.println("** Правильно! **");
             }else {
-                System.out.println(". . . Извините, нужная буква находится");
+                System.out.println("... Извините, нужная буква находится");
                 if(ch > answer) System.out.println("ближe к началу алфавита");
                 else System.out.println("ближe к концу алфавита");
                 System.out.println("Пoвтopитe попытку!\n");
