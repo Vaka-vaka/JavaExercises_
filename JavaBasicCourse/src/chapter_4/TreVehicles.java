@@ -19,6 +19,11 @@ public class TreVehicles {
 }
 
 class RatMeth{
+    /**
+     * Program entry point.
+     *
+     * @param args command Line arguments
+     */
     public static void main(String[] args) {
         TreVehicles minivan = new TreVehicles();
         TreVehicles sportscar = new TreVehicles();
