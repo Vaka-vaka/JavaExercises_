@@ -9,7 +9,7 @@ package chapter_4;
 
 class Vehicles {
 
-        int passengers;  // количе ство пассажиров
+        int passengers;  // количество пассажиров
         int fuelcap;     // емкость топливного бака
         int mpq1;         // потребление топлива в милях на галлон
 
