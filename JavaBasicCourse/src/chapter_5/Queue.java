@@ -2,7 +2,7 @@
  * A class that implements a queue for storing characters
  *
  * @author Valentyn Mozul
- * @version 1.0 from 10.10.2022
+ * @version 1.0 from 19.10.2022
  */
 
 package chapter_5;
