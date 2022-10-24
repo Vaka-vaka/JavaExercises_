@@ -73,6 +73,11 @@ public class Queue {
 }
 
 class QDemo {
+    /**
+     * Program entry point.
+     *
+     * @param args command Line arguments
+     */
     public static void main(String[] args) {
         Queue bigQ = new Queue(100, 200, 200);
        // Queue smallQ = new Queue(4);
