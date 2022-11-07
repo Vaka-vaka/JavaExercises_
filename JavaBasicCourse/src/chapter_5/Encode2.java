@@ -18,13 +18,13 @@ public class Encode2 {
         System.out.println("Иcxoднoe сообщение : ");
         System.out.println(s);
 
-        for (int i = 0; i < s.length(); i++){
+        for (int i = 0; i < s.length(); i++) {
             s1 = s1 + (char) (s.charAt(i) ^ keey);
         }
         System.out.println("Зaшифpoвaннoe сообщение :");
         System.out.println(s1);
 
-        for (int i = 0; i < s.length(); i++){
+        for (int i = 0; i < s.length(); i++) {
             s2 = s2 + (char) (s1.charAt(i) ^ keey);
         }
         System.out.println("Дешифрованное сообщение : ");
