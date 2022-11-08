@@ -1,7 +1,11 @@
 package primitiveTypes;
 
 public class BitShift {
-
+    /**
+     * Program entry point.
+     *
+     * @param args command Line arguments
+     */
     public static void main(String[] args) {
         int x = 160; // 10100000
         System.out.println(">> " + x);
