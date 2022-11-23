@@ -37,7 +37,7 @@ public class Queue {
     }
 }
 
-class QDemo{
+class QDemo {
     /**
      * Program entry point.
      *
@@ -46,6 +46,6 @@ class QDemo{
     public static void main(String[] args) {
         Queue queue = new Queue(10);
         queue.get();
-        queue.put('4');
+        queue.put('a');
     }
 }
