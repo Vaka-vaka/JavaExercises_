@@ -37,14 +37,14 @@ public class Queue2 {
 
         for (int i = 0; i < a.length; i++) put(a[i]);
     }
-
     // Помещение символа в очередь
     void put(char ch) {
         if (putloc == q.length - 1) {
             System.out.println(" - Очередь заполнена");
             return;
         }
-        q[putloc++] = ch;
+        putloc++;
+        q[putloc] = ch;
     }
 
     // Извлечение символа из очереди
@@ -53,7 +53,8 @@ public class Queue2 {
             System.out.println(" - Очередь пуста");
             return (char) 0;
         }
-        return q[getloc++];
+        getloc++;
+        return q[getloc];
     }
 }
 
@@ -71,13 +72,12 @@ class Queue2Demo {
         // Создание очереди на основе массива
         Queue2 queue2 = new Queue2(name);
 
-        char ch;
+        char ch, ch1;
         int i;
 
         // Помещение ряда символов в очередь queue1
         for (i = 0; i < 10; i++)
             queue1.put((char) ('A' + i));
-
 
         // Создание одной очереди на основе другой
         Queue2 queue3 = new Queue2(queue1);
@@ -85,21 +85,22 @@ class Queue2Demo {
         System.out.print("Coдepжимoe queue1 : ");
         for (i = 0; i < 10; i++) {
             ch = queue1.get();
-            System.out.print(ch + " ");
+            System.out.print(ch);
         }
         System.out.println("\n");
 
         System.out.print("Coдepжимoe  queue2 : ");
         for (i = 0; i < name.length; i++) {
             ch = queue2.get();
-            System.out.print(ch + " ");
+            System.out.print(ch);
         }
         System.out.println("\n");
 
         System.out.print("Coдepжимoe  queue3 : ");
         for (i = 0; i < 10; i++) {
-            ch = queue3.get();
-            System.out.print(ch + " ");
+            ch1 = queue3.get();
+            System.out.print(ch1);
         }
     }
 }
+
