@@ -14,6 +14,14 @@ public class StaticMeth {
     static int valDiv2() {
         return val / 2;
     }
+
+    public String frontBack(String str){
+        if (str.length() <= 1) return str;
+
+        String mid = str.substring(1, str.length() - 1);
+
+        return str.charAt(str.length() - 1)+ mid + str.charAt(0);
+    }
 }
 
 class SDemo2 {
@@ -28,5 +36,9 @@ class SDemo2 {
         StaticMeth.val = 8;
         System.out.println("Знaчeниe val : " + StaticMeth.val);
         System.out.println("Знaчeниe StaticMeth.valDiv2 : " + StaticMeth.valDiv2());
+        System.out.println();
+
+        StaticMeth staticMeth = new StaticMeth();
+        System.out.println(staticMeth.frontBack("code"));
     }
 }
