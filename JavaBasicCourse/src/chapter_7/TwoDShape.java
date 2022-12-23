@@ -50,6 +50,11 @@ class Rectangle extends TwoDShape {
 }
 
 class TwoDShapeDemo {
+    /**
+     * Program entry point.
+     *
+     * @param args command Line arguments
+     */
     public static void main(String[] args) {
         Triangle triangle1 = new Triangle();
         Triangle triangle2 = new Triangle();
