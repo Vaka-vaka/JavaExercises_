@@ -83,7 +83,6 @@ class Circle extends TwoDShapeCircle{
         return getPi() * (getDiameter() / 2) * 2;
     }
 
-    @java.lang.Override
     double diameter() {
         return ((2 * getArea()) / getPi()) / 2;
     }
