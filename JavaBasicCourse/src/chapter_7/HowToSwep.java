@@ -41,6 +41,7 @@ public class HowToSwep {
         a = y;
         b = x;
         System.out.println(a + " " + b);
+
     }
 
     void getMethod2(){
