@@ -50,10 +50,10 @@ public class Test {
 //                System.out.println();
 //        }
 
-//        System.out.println("Введіть розмір трикутника");
-//        Scanner scanner = new Scanner(System.in);
-//        int size = scanner.nextInt();
-//        for(int i = size; i > 0; i--){
+//        System.out.println("Введіть розмір трикутника1");
+//        Scanner scanner1 = new Scanner(System.in);
+//        int size1 = scanner1.nextInt();
+//        for(int i = size1; i > 0; i--){
 //            for(int y = 0; y < i; y++){
 //                System.out.print("*");
 //            }
@@ -76,15 +76,62 @@ public class Test {
 //            i--;
 //        }
 
-        System.out.println("Введіть розмір трикутника");
+//        System.out.println("Введіть розмір трикутника");
+//        Scanner scanner = new Scanner(System.in);
+//        int size = scanner.nextInt();
+//
+//        for(int i = 1; i <= size; i++){
+//           for (int y = 0; y < i; y++){
+//               System.out.print("*");
+//           }
+//            System.out.println();
+//        }
+
+        System.out.println("Введіть розмір трикутника");//ялинка
         Scanner scanner = new Scanner(System.in);
         int size = scanner.nextInt();
-
-        for(int i = 1; i <= size; i++){
-           for (int y = 0; y < i; y++){
-               System.out.print("*");
-           }
+        int t = 0;
+        for (int i = size; i > 0; i--) {
+            for (int y = 0; y < i; y++){
+                System.out.print(" ");
+            }
+            for (int a = 0; a <= t * 2; a++){
+                System.out.print("*");
+            }
             System.out.println();
+            t++;
         }
+
+//        System.out.println("Введіть розмір трикутника");
+//        Scanner scanner = new Scanner(System.in);
+//        int size = scanner.nextInt();
+//        int t = 0;
+//        for (int i = size; i > 0; i--) {
+//            for (int y = 0; y < i; y++){
+//                System.out.print(" ");
+//            }
+//            for (int a = 0; a <= t; a++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//            t++;
+//        }
+
+//        System.out.println("Введіть розмір трикутника");
+//        Scanner scanner1 = new Scanner(System.in);
+//        int size1 = scanner1.nextInt();
+//        int t1 = 0;
+//        for (int i = size1; i > 0; i--) {
+//
+//            for (int a = 0; a <= t1; a++){
+//                System.out.print(" ");
+//            }
+//            for (int y = 0; y < i; y++){
+//                System.out.print("*");
+//            }
+//
+//            System.out.println();
+//            t1++;
+//        }
     }
 }
