@@ -10,6 +10,11 @@ package chapter_7;
 import java.util.Scanner;
 
 public class EmpireStateBuilding {
+    /**
+     * Program entry point.
+     *
+     * @param args command Line arguments
+     */
     public static void main(String[] args) {
         DemoLogin demoLogin = new DemoLogin();
 

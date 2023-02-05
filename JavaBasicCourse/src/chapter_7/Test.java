@@ -87,20 +87,20 @@ public class Test {
 //            System.out.println();
 //        }
 
-        System.out.println("Введіть розмір трикутника");//ялинка
-        Scanner scanner = new Scanner(System.in);
-        int size = scanner.nextInt();
-        int t = 0;
-        for (int i = size; i > 0; i--) {
-            for (int y = 0; y < i; y++){
-                System.out.print(" ");
-            }
-            for (int a = 0; a <= t * 2; a++){
-                System.out.print("*");
-            }
-            System.out.println();
-            t++;
-        }
+//        System.out.println("Введіть розмір трикутника");//ялинка
+//        Scanner scanner = new Scanner(System.in);
+//        int size = scanner.nextInt();
+//        int t = 0;
+//        for (int i = size; i > 0; i--) {
+//            for (int y = 0; y < i; y++){
+//                System.out.print(" ");
+//            }
+//            for (int a = 0; a <= t * 2; a++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//            t++;
+//        }
 
 //        System.out.println("Введіть розмір трикутника");
 //        Scanner scanner = new Scanner(System.in);
@@ -133,5 +133,39 @@ public class Test {
 //            System.out.println();
 //            t1++;
 //        }
+//        int a = 5;
+//        int b = 1;
+//        int c = 0;
+//
+//        if (a <= b) {
+//            while (a <= b) {
+//                // c +=a; and
+//                c = c + a;
+//                a++;
+//            }
+//            System.out.println("sum " + c);
+//        }else {
+//            while (b <= a) {
+//                // c +=a; and
+//                c = c + b;
+//                b++;
+//            }
+//            System.out.println("sum " + c);
+//        }
+
+        int a = 5;
+        int b = 1;
+
+        if(a > b){
+            int c = b;
+            b = a;
+            a = c;
+        }
+
+        int d = 0;
+        while (a <= b){
+            d += a++;
+        }
+        System.out.println(d);
     }
 }
