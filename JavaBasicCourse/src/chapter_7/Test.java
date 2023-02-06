@@ -153,19 +153,35 @@ public class Test {
 //            System.out.println("sum " + c);
 //        }
 
-        int a = 5;
-        int b = 1;
+//        int a = 5;
+//        int b = 1;
+//
+//        if(a > b){
+//            int c = b;
+//            b = a;
+//            a = c;
+//        }
+//
+//        int d = 0;
+//        while (a <= b){
+//            d += a++;
+//        }
+//        System.out.println(d);
 
-        if(a > b){
-            int c = b;
-            b = a;
-            a = c;
-        }
+//        int[] array = new int[11];
+//        int a = 0;
+//
+//        while (a < 11){
+//            array[a] = a;
+//            a++;
+//        }
+//
+//        a = 0;
+//        while (a < 11){
+//            System.out.println(array[a]);
+//            a++;
+//        }
 
-        int d = 0;
-        while (a <= b){
-            d += a++;
-        }
-        System.out.println(d);
+
     }
 }
