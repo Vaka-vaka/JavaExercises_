@@ -4,7 +4,7 @@
  * @version 1.0 from 07.02.2023
  */
 
-package chapter_7;
+package chapter_8;
 
 public class Book {
     private String title;
