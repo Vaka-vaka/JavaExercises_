@@ -181,7 +181,25 @@ public class Test {
 //            System.out.println(array[a]);
 //            a++;
 //        }
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int d = 8;
+        int e = 5;
+        int f = 6;
+        int max = 0;
 
-
+        if (a < b) {
+            max = b;
+        }if (b < c) {
+            max = c;
+        }if (c < d) {
+            max = d;
+        }if (d < e) {
+            max = e;
+        }if (e < f) {
+            max = f;
+        }
+        System.out.println(max);
     }
 }
