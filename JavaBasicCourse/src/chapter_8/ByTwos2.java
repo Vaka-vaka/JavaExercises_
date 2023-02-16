@@ -6,7 +6,7 @@
  * и добавление метода get Previous()
  *
  * @author Valentyn Mozul
- * @version 1.0 from 14.02.2023
+ * @version 1.0 from 15.02.2023
  */
 
 package chapter_8;

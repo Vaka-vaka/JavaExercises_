@@ -14,5 +14,5 @@ public interface Series {
 
     void reset(); // сброс
 
-    void setStart(int x); // установка началь ного значения
+    void setStart(int x); // установка начального значения
 }
