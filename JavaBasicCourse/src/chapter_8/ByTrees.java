@@ -37,3 +37,21 @@ public class ByTrees implements Series {
     }
 }
 
+class Demo {
+    /**
+     * Program entry point.
+     *
+     * @param args command Line arguments
+     */
+    public static void main(String[] args) {
+        ByTrees byTrees = new ByTrees();
+        ByTrees byTrees1 = new ByTrees();
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Значение ByTrees : " + byTrees.getNex());
+
+            System.out.println("Значение ByTrees2 : " + byTrees1.getNex());
+        }
+    }
+}
+

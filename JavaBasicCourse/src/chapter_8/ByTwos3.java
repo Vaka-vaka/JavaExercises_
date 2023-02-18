@@ -62,6 +62,11 @@ class ByThrees1 implements Series {
 }
 
 class SeriesDemo {
+    /**
+     * Program entry point.
+     *
+     * @param args command Line arguments
+     */
     public static void main(String[] args) {
         ByTwos3 byTwos3 = new ByTwos3();
         ByThrees1 byThrees1 = new ByThrees1();
