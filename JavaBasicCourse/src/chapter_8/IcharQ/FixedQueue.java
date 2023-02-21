@@ -8,6 +8,7 @@
  */
 
 package chapter_8.IcharQ;
-
 public class FixedQueue {
+
+
 }
