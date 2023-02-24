@@ -9,6 +9,8 @@
 
 package chapter_8.IcharQ;
 public class FixedQueue {
+    public static void main(String[] args) {
 
+    }
 
 }
