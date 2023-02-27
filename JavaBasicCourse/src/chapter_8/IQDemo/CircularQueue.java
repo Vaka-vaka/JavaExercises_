@@ -15,7 +15,7 @@ public class CircularQueue implements IChar_Q {
     private int putloc, getloc; //индексы в ставляемых и извлекаемых элементов
 
     //Создание пустой очереди заданного размера
-    public void CircularQueue(int size){
+    public CircularQueue(int size){
         q = new char[size + 1];
         putloc = getloc = 0;
     }
