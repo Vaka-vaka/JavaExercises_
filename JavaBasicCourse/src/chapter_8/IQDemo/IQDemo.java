@@ -10,6 +10,8 @@ package chapter_8.IQDemo;
 
 import chapter_8.IcharQ.IChar_Q;
 
+import java.util.logging.SocketHandler;
+
 public class IQDemo {
     /**
      * Program entry point.
@@ -50,5 +52,20 @@ public class IQDemo {
             System.out.print(ch);
         }
         System.out.println();
+
+        iQ = q3;
+        //  Помещение ряда символов в кольцевую очередь
+        for(i = 0; i < 10; i++){
+            iQ.put((char) ('A' + i));
+        }
+        //  Отображение содержимого очереди
+        System.out.println("Coдepжимoe кольцевой очереди : ");
+        for(i = 0; i < 10; i++){
+            ch = iQ.get();
+            System.out.print(ch);
+        }
+        System.out.println();
     }
+
 }
+
