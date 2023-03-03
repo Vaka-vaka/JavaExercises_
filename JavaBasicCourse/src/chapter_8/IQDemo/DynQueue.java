@@ -9,20 +9,19 @@
 package chapter_8.IQDemo;
 
 import chapter_8.IcharQ.IChar_Q;
-
-public class DynQueue implements IChar_Q {
+ class DynQueue implements IChar_Q {
     private char[] q; //массив для хранения элементов очереди
     private int putloc, getloc;
 
     //Создание пустой очереди заданного размера
     public DynQueue(int size){
-        q = new char[size]; //вьщеление памяти для очереди
+        q = new char[size + 1]; //вьщеление памяти для очереди
         putloc = getloc = 0;
     }
     // Помещение символа в очередь
     @Override
     public void put(char ch) {
-        if(putloc == q.length){
+        if(putloc == q.length-1){
             //Увеличение размера очереди
             char[] t = new char[q.length * 2];
             // Копирование элементов в новую очередь
@@ -30,7 +29,8 @@ public class DynQueue implements IChar_Q {
                 t[i] = q[i];
                 q = t;
             }
-            q[putloc++] = ch;
+            putloc++;
+            q[putloc] = ch;
         }
     }
 
@@ -41,6 +41,7 @@ public class DynQueue implements IChar_Q {
             System.out.println(" - Очередь пуста");
             return (char) 0;
         }
-        return q[getloc++];
+        getloc++;
+        return q[getloc];
     }
 }

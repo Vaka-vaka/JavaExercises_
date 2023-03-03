@@ -24,14 +24,15 @@ public class IQDemo {
         CircularQueue q3 = new CircularQueue(10);
 
         IChar_Q iQ;
+
         char ch;
         int i;
 
         iQ = q1;
         // Помещение ряда символов в очередь фиксированного размера
-        for (i = 0; i < 10; i++){
+        for (i = 0; i < 10; i++)
             iQ.put ((char) ('A' + i));
-        }
+
         //Отображение содержимого очереди
         System.out.println("Coдepжимoe фиксированной очереди : ");
         for (i = 0; i < 10; i++){
@@ -42,9 +43,9 @@ public class IQDemo {
 
         iQ = q2;
         // Помещение ряда символов в динамическую очередь
-        for (i = 0; i < 10; i++){
+        for (i = 0; i < 10; i++)
             iQ.put((char) ('Z' - i));
-        }
+
         // Отображение содержимого очереди
         System.out.println("Coдepжимoe динамической очереди : ");
         for (i = 0; i < 10; i++){
@@ -55,9 +56,9 @@ public class IQDemo {
 
         iQ = q3;
         //  Помещение ряда символов в кольцевую очередь
-        for(i = 0; i < 10; i++){
+        for(i = 0; i < 10; i++)
             iQ.put((char) ('A' + i));
-        }
+
         //  Отображение содержимого очереди
         System.out.println("Coдepжимoe кольцевой очереди : ");
         for(i = 0; i < 10; i++){
@@ -65,7 +66,25 @@ public class IQDemo {
             System.out.print(ch);
         }
         System.out.println();
-    }
 
+        // Помещение дополнительных символов в кольцевую очередь
+        for (i = 10; i < 20; i++)
+            iQ.put((char) ('A' + i));
+
+            //  Отображение содержимого очереди
+            System.out.println("Coдepжимoe кольцевой очереди : ");
+            for(i = 0; i < 10; i++){
+                ch = iQ.get();
+                System.out.print(ch);
+            }
+            System.out.println("\nCoxpaнeниe и использование данных кольцевой очереди.");
+
+            // Помещение символов в кольцевую очередь с последующим их извлечением
+            for(i = 0; i < 20; i++){
+                iQ.put((char) ('A' + i));
+                ch = iQ.get();
+                System.out.print(ch);
+        }
+    }
 }
 
