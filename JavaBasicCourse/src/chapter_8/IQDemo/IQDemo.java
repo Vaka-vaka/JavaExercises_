@@ -11,7 +11,8 @@ package chapter_8.IQDemo;
 import chapter_8.IcharQ.IChar_Q;
 
 import java.util.logging.SocketHandler;
- class IQDemo {
+
+class IQDemo {
     /**
      * Program entry point.
      *
@@ -30,11 +31,11 @@ import java.util.logging.SocketHandler;
         iQ = q1;
         // Помещение ряда символов в очередь фиксированного размера
         for (i = 0; i < 10; i++)
-            iQ.put ((char) ('A' + i));
+            iQ.put((char) ('A' + i));
 
         //Отображение содержимого очереди
         System.out.println("Coдepжимoe фиксированной очереди : ");
-        for (i = 0; i < 10; i++){
+        for (i = 0; i < 10; i++) {
             ch = iQ.get();
             System.out.print(ch);
         }
@@ -46,8 +47,28 @@ import java.util.logging.SocketHandler;
             iQ.put((char) ('Z' - i));
 
         // Отображение содержимого очереди
-        System.out.println("Coдepжимoe динамической очереди : ");
-        for (i = 0; i < 10; i++){
+        System.out.println("Coдepжимoe динамической очереди1 : ");
+        for (i = 0; i < 10; i++) {
+            ch = iQ.get();
+            System.out.print(ch);
+        }
+        System.out.println();
+
+        // Помещение дополнительных символов в динамическую очередь
+        for (i = 10; i < 20; i++)
+            iQ.put((char) ('Z' - i));
+        // Отображение содержимого очереди
+        System.out.println("Coдepжимoe динамической очереди2 : ");
+        for (i = 0; i < 10; i++) {
+            ch = iQ.get();
+            System.out.print(ch);
+        }
+
+        System.out.println("\nCoxpaнeниe и использование данных динамической очереди.");
+
+        // Помещение символов в динамическую очередь с последующим их извлечением
+        for (i = 0; i < 20; i++) {
+            iQ.put((char) ('Z' - i));
             ch = iQ.get();
             System.out.print(ch);
         }
@@ -55,12 +76,12 @@ import java.util.logging.SocketHandler;
 
         iQ = q3;
         //  Помещение ряда символов в кольцевую очередь
-        for(i = 0; i < 10; i++)
+        for (i = 0; i < 10; i++)
             iQ.put((char) ('A' + i));
 
         //  Отображение содержимого очереди
-        System.out.println("Coдepжимoe кольцевой очереди : ");
-        for(i = 0; i < 10; i++){
+        System.out.println("Coдepжимoe кольцевой очереди1 : ");
+        for (i = 0; i < 10; i++) {
             ch = iQ.get();
             System.out.print(ch);
         }
@@ -70,19 +91,19 @@ import java.util.logging.SocketHandler;
         for (i = 10; i < 20; i++)
             iQ.put((char) ('A' + i));
 
-            //  Отображение содержимого очереди
-            System.out.println("Coдepжимoe кольцевой очереди : ");
-            for(i = 0; i < 10; i++){
-                ch = iQ.get();
-                System.out.print(ch);
-            }
-            System.out.println("\nCoxpaнeниe и использование данных кольцевой очереди.");
+        //  Отображение содержимого очереди
+        System.out.println("Coдepжимoe кольцевой очереди2 : ");
+        for (i = 0; i < 10; i++) {
+            ch = iQ.get();
+            System.out.print(ch);
+        }
+        System.out.println("\nCoxpaнeниe и использование данных кольцевой очереди.");
 
-            // Помещение символов в кольцевую очередь с последующим их извлечением
-            for(i = 0; i < 20; i++){
-                iQ.put((char) ('A' + i));
-                ch = iQ.get();
-                System.out.print(ch);
+        // Помещение символов в кольцевую очередь с последующим их извлечением
+        for (i = 0; i < 20; i++) {
+            iQ.put((char) ('A' + i));
+            ch = iQ.get();
+            System.out.print(ch);
         }
     }
 }

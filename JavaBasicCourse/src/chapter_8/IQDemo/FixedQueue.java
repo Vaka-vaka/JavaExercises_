@@ -17,27 +17,33 @@ public class FixedQueue implements IChar_Q {
     private int putloc, getloc; //индексы в ставляемых и извлекаемых элементов
 
     //Создание пустой очереди заданного размера
-     public FixedQueue(int size){
-         q = new char[size]; //выделение памяти для очереди
-         putloc = getloc = 0;
-     }
+    public FixedQueue(int size) {
+        q = new char[size]; //выделение памяти для очереди
+        putloc = getloc = 0;
+    }
 
-     // Помещение символа в очередь
-    public void put(char ch){
-         if(putloc == q.length){
-             System.out.println(" - Очередь заполнена");
-             return;
-         }
-         q[putloc++] = ch;
+    // Помещение символа в очередь
+    public void put(char ch) {
+        if (putloc == q.length) {
+            System.out.println(" - Очередь заполнена");
+            return;
+        }
+        q[putloc++] = ch;
     }
 
     // Извлечение символа из очереди
-    public char get(){
-         if(getloc == putloc){
-             System.out.println(" - Очередь пуста");
-             return (char) 0;
-         }
-         return q[getloc++];
+    public char get() {
+        if (getloc == putloc) {
+            System.out.println(" - Очередь пуста");
+            return (char) 0;
+        }
+        return q[getloc++];
+    }
+
+    @Override
+    public void reset() {
+        putloc = 0;
+        getloc = 0;
     }
 }
 
