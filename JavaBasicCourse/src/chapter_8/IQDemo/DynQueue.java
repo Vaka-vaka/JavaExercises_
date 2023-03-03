@@ -21,17 +21,16 @@ import chapter_8.IcharQ.IChar_Q;
     // Помещение символа в очередь
     @Override
     public void put(char ch) {
-        if(putloc == q.length-1){
+        if(putloc == q.length-1) {
             //Увеличение размера очереди
             char[] t = new char[q.length * 2];
             // Копирование элементов в новую очередь
-            for (int i = 0; i < q.length; i++){
+            for (int i = 0; i < q.length; i++)
                 t[i] = q[i];
-                q = t;
-            }
+            q = t;
+        }
             putloc++;
             q[putloc] = ch;
-        }
     }
 
     //Извлечение символа из очереди

@@ -11,8 +11,7 @@ package chapter_8.IQDemo;
 import chapter_8.IcharQ.IChar_Q;
 
 import java.util.logging.SocketHandler;
-
-public class IQDemo {
+ class IQDemo {
     /**
      * Program entry point.
      *
