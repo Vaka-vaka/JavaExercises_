@@ -21,6 +21,10 @@ public class MyIFImp implements MyIF {
     public int getAdminID() {
         return 54544;
     }
+
+    public int getuID(){
+        return MyIF.getUniversalID() + 123123;
+    }
 }
 
 

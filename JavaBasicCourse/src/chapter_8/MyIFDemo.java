@@ -20,6 +20,13 @@ public class MyIFDemo {
         System.out.println("Идентификатор пользователя " + imp.getUserID());
 
         //Вызов метода getAdmiпID() также возможен, поскольку предоставляется его реализация по умолчанию
-        System.out.println("Идентифика тор администратора : " + imp.getAdminID());
+        System.out.println("Идентификатор администратора : " + imp.getAdminID());
+
+        int uID = MyIF.getUniversalID() + 1000002302;
+        //Вызов метода getUniversalID() также возможен
+        System.out.println("Идентификатор универсальный : " + uID);
+
+        //Вызов метода getuID() также возможен
+        System.out.println("Идентификатор универсальный2 : " + imp.getuID());
     }
 }

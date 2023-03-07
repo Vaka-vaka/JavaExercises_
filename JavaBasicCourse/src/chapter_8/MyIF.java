@@ -16,4 +16,9 @@ public interface MyIF {
     default int getAdminID() {
         return 0;
     }
+
+    //Объявление статического метода интерфейса
+    static int getUniversalID() {
+        return 2 * 2;
+    }
 }
