@@ -7,9 +7,9 @@
  * @version 1.0 from 20.02.2023
  */
 
-package chapter_8.IQDemo;
+package chapter_8.qpack;
 
-import chapter_8.IcharQ.IChar_Q;
+import chapter_8.icharQ.IChar_Q;
 
 public class FixedQueue implements IChar_Q {
 

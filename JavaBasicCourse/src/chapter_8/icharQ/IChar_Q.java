@@ -6,7 +6,7 @@
  * @version 1.0 from 20.02.2023
  */
 
-package chapter_8.IcharQ;
+package chapter_8.icharQ;
 
 public interface IChar_Q {
     // Помещение символа в очередь

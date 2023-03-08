@@ -6,11 +6,11 @@
  * @version 1.0 from 25.02.2023
  */
 
-package chapter_8.IQDemo;
-
-import chapter_8.IcharQ.IChar_Q;
-
-import java.util.logging.SocketHandler;
+package chapter_8.iQDemo;
+import chapter_8.qpack.CircularQueue;
+import chapter_8.qpack.DynQueue;
+import chapter_8.qpack.FixedQueue;
+import chapter_8.icharQ.IChar_Q;
 
 class IQDemo {
     /**

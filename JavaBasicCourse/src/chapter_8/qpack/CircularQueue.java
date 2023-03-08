@@ -6,11 +6,11 @@
  * @version 1.0 from 24.02.2023
  */
 
-package chapter_8.IQDemo;
+package chapter_8.qpack;
 
-import chapter_8.IcharQ.IChar_Q;
+import chapter_8.icharQ.IChar_Q;
 
-class CircularQueue implements IChar_Q {
+public class CircularQueue implements IChar_Q {
     private char[] q; //массив для хранения элементов очереди
     private int putloc, getloc; //индексы в ставляемых и извлекаемых элементов
 
