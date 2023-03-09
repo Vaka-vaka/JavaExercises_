@@ -7,10 +7,10 @@
 
 package chapter_7;
 
-public class Vehicle {
+public class Vehicle implements Ivehicle {
     private int passengers; // количество пассажиров
-    private int fuelcap; //объем топливного бака (в галлонах )
-    private int mpg; // потребление топлива (в милях на галлон )
+    private int fuelcap; //объем топливного бака (в галлонах)
+    private int mpg; // потребление топлива (в милях на галлон)
 
     Vehicle(int p, int f, int m) {
         passengers = p;
@@ -19,43 +19,43 @@ public class Vehicle {
     }
 
     // Определение дальности поездки транспортного средства
-    int range() {
+    public int range() {
         return mpg * fuelcap;
     }
 
     // Расчет количества топлива, необходимого транспортному
     // средству для преодоления заданного расстояния
-    double fuelneeded(int miles) {
+    public double fuelneeded(int miles) {
         return (double) miles / mpg;
     }
 
-    int getPassengers() {
+    public int getPassengers() {
         return passengers;
     }
 
-    void setPassengers(int p) {
+    public void setPassengers(int p) {
         passengers = p;
     }
 
-    int getFuelcap() {
+    public int getFuelcap() {
         return fuelcap;
     }
 
-    void setFuelcap(int f) {
+    public void setFuelcap(int f) {
         fuelcap = f;
     }
 
-    int getMpg() {
+    public int getMpg() {
         return mpg;
     }
 
-    void setMpg(int m) {
+    public void setMpg(int m) {
         mpg = m;
     }
 }
 
 class Truck extends Vehicle {
-    private int cargocap; // грузоподъемность , выраженная в фунтах
+    private int cargocap; // грузоподъемность, выраженная в фунтах
 
     Truck(int p, int f, int m, int c) {
         super(p, f, m);
