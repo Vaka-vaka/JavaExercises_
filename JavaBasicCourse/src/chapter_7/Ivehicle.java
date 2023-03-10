@@ -6,7 +6,7 @@
  */
 
 package chapter_7;
-
+import java.lang.*;  //Цей пакет автоматично імпортується у всі програми на мові Java.
 public interface Ivehicle {
     // Определение дальности поездки транспортного средства
     int range();
