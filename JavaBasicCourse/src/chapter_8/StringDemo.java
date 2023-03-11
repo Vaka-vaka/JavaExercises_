@@ -32,5 +32,11 @@ public class StringDemo {
         System.out.println(s);
         s = new String(asc, 0, 4);
         System.out.println(s);
+        System.out.println();
+
+        int[] arrayLang = {1, 2, 3, 4, 5};
+        for (int i = 0; i < arrayLang.length - 2; ++i) {
+            System.out.print(arrayLang[i] + " ");
+        }
     }
 }
