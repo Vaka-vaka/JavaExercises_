@@ -1,5 +1,5 @@
 /**
- * Test
+ * Test demo
  *
  * @author Valentyn Mozul
  * @version 1.0 from 08.03.2023
