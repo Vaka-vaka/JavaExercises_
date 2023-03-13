@@ -6,7 +6,6 @@
  */
 
 package chapter_8;
-
 public class StringDemo {
     /**
      * Program entry point.
