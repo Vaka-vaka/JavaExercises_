@@ -26,10 +26,10 @@ public class Max {
             max = 0;
             for (int i = 0; i < 8; i++) {
                 int mountainH = in.nextInt(); // represents the height of one mountain.
-                 if(mountainH > max){
-                     max = mountainH;
-                     Imax = i;
-                 }
+                if (mountainH > max) {
+                    max = mountainH;
+                    Imax = i;
+                }
             }
             // Write an action using System.out.println()
             // To debug: System.err.println("Debug messages...");
