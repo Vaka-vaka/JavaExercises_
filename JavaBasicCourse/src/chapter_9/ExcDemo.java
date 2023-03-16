@@ -25,6 +25,7 @@ public class ExcDemo {
         } catch (ArrayIndexOutOfBoundsException exc) { //Перехват ошибок, вызываемых выходом за пределы массива
             System.out.println("Bыxoд за пределы массива!");
         }
+
         System.out.println("Пocлe инструкции catch");
     }
 }
