@@ -13,7 +13,7 @@ startOz("bzoo") → "z"
 startOz("oxx") → "o"
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class StartOz {
     public String startOz(String str) {

@@ -13,7 +13,7 @@ close10(13, 8) → 8
 close10(13, 7) → 0
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class Close10 {
     public int close10(int a, int b) {

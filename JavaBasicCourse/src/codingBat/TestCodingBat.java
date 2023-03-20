@@ -3,7 +3,7 @@
  * @version 1.0 from 09.12.2022
  */
 
-package CodingBat;
+package codingBat;
 
 public class TestCodingBat {
     int count;

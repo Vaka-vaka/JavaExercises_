@@ -12,7 +12,7 @@ delDel("adelHello") → "aHello"
 delDel("adedbc") → "adedbc"
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class DelDel {
     public String delDel(String str) {

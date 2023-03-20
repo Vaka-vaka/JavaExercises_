@@ -11,7 +11,7 @@ lastDigit(6, 17) → false
 lastDigit(3, 113) → true
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class LastDigit {
     boolean lastDigit(int a, int b) {

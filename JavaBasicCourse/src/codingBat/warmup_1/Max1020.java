@@ -11,7 +11,7 @@ max1020(19, 11) → 19
 max1020(11, 9) → 11
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class Max1020 {
     int max1020(int a, int b) {

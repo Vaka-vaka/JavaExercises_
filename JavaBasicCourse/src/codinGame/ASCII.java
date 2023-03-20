@@ -13,7 +13,7 @@
  * @version 1.0 from 08.02.2023
  */
 
-package CodinGame;
+package codinGame;
 
 public class ASCII {
 }

@@ -12,7 +12,7 @@ in1020(21, 12) → true
 in1020(8, 99) → false
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class In1020 {
     public boolean in1020(int a, int b){

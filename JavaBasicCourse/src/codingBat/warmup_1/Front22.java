@@ -15,7 +15,7 @@ front22("Ha") → "HaHaHa"
 front22("abc") → "ababcab"
  */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class Front22 {
     public String front22(String str) {

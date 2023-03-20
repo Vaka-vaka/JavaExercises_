@@ -11,7 +11,7 @@ endUp("hi there") → "hi thERE"
 endUp("hi") → "HI"
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class AndUp {
     String andUp(String str) {

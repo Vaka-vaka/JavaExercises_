@@ -12,7 +12,7 @@ mixStart("pix snacks") → true
 mixStart("piz snacks") → false
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class MixStart {
     public boolean mixStart(String str) {

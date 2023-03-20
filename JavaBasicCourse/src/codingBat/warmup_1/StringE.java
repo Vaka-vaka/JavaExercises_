@@ -11,7 +11,7 @@ stringE("Heelle") → true
 stringE("Heelele") → false
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class StringE {
     boolean stringE(String str){

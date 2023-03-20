@@ -5,7 +5,7 @@
  * @version 1.0 from 09.02.2023
  */
 
-package CodinGame;
+package codinGame;
 
 import java.util.Scanner;
 

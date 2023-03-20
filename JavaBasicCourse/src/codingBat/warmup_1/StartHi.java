@@ -11,7 +11,7 @@ startHi("hi there") → true
 startHi("hi") → true
 startHi("hello hi") → false*/
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class StartHi {
     public boolean startHi(String str){

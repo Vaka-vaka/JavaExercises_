@@ -13,7 +13,7 @@ hasTeen(20, 19, 10) → true
 hasTeen(20, 10, 13) → true
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class HasTen {
     public boolean hasTen(int a, int b, int c) {

@@ -11,7 +11,7 @@ intMax(1, 3, 2) → 3
 intMax(3, 2, 1) → 3
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class IntMax {
     int max = 0;

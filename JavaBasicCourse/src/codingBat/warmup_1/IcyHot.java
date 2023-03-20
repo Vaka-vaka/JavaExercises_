@@ -12,7 +12,7 @@ icyHot(-1, 120) → true
 icyHot(2, 120) → false
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class IcyHot {
     public boolean icyHot(int temp1, int temp2) {

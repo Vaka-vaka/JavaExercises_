@@ -12,7 +12,7 @@ in3050(30, 41) → false
 in3050(40, 50) → true
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class In3050 {
     public boolean in3050(int a, int b) {

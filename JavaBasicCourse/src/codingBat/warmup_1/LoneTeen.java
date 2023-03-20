@@ -12,7 +12,7 @@ loneTeen(21, 19) → true
 loneTeen(13, 13) → false
 */
 
-package CodingBat.warmup_1;
+package codingBat.warmup_1;
 
 public class LoneTeen {
     public boolean loneTeen(int a, int b) {

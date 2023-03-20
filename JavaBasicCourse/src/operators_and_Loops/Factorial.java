@@ -5,7 +5,7 @@
  * @version 1.0 from 05.10.2022
  */
 
-package Operators_and_Loops;
+package operators_and_Loops;
 
 import java.math.BigInteger;
 
