@@ -33,13 +33,13 @@ public class Calculator {
         windowContent.setLayout(borderLayout);
 
         //Задаём схему для этой панели
-        displayField = new JTextField(50);
+        displayField = new JTextField(40);
         windowContent.add("North", displayField);
 
-        buttonPoint = new JButton(".");
-        buttonPoint.setBackground(Color.white);
+        buttonPoint = new JButton(",");
+        buttonPoint.setBackground(Color.cyan);
         buttonEquals = new JButton("=");
-        buttonEquals.setBackground(Color.white);
+        buttonEquals.setBackground(Color.cyan);
         buttonMultiplication = new JButton("*");
         buttonMultiplication.setBackground(Color.cyan);
         buttonDivision = new JButton("/");
