@@ -1,5 +1,5 @@
 /**
- * Write a calculator that allows you to add two numbers and see the result
+ * Calculator visual parts
  *
  * @author Valentyn Mozul
  * @version 1.0 from 29.03.2023
@@ -93,6 +93,9 @@ public class Calculator {
 
         // Наконец, отображаем окно
         frame.setVisible(true);
+
+        CalculatorEngine calculatorEngine = new CalculatorEngine();
+        buttonPlus.addActionListener(calculatorEngine);
     }
 
     /**
