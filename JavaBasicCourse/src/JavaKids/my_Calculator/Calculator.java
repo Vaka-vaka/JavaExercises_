@@ -13,7 +13,7 @@ import java.awt.*;
 public class Calculator {
     JPanel windowContent;
     JTextField displayField;
-    Button[] numButtons;
+    JButton[] numButtons;
     JButton buttonPoint;
     JButton buttonEquals;
     JButton buttonPlus;
@@ -62,11 +62,13 @@ public class Calculator {
         // Создаём кнопки, используя конструктор
         // класса JButton, который принимает текст
         // кнопки в качестве параметра
-        numButtons = new Button[10];
+        CalculatorEngineJButton calculatorEngineJButton = new CalculatorEngineJButton(this);// окно сообщения
+        numButtons = new JButton[10];
         for (int i = 9; i >= 0; i--) {
-            numButtons[i] = new Button(String.valueOf(i));
+            numButtons[i] = new JButton(String.valueOf(i));
             numButtons[i].setBackground(Color.green);
             pl.add(numButtons[i]);
+            numButtons[i].addActionListener(calculatorEngineJButton);
         }
 
         // Добавляем кнопки на панель p1
@@ -94,8 +96,12 @@ public class Calculator {
         // Наконец, отображаем окно
         frame.setVisible(true);
 
-        CalculatorEngine calculatorEngine = new CalculatorEngine();
-        buttonPlus.addActionListener(calculatorEngine);
+        buttonPlus.addActionListener(calculatorEngineJButton);
+        buttonMinus.addActionListener(calculatorEngineJButton);
+        buttonDivision.addActionListener(calculatorEngineJButton);
+        buttonPoint.addActionListener(calculatorEngineJButton);
+        buttonMultiplication.addActionListener(calculatorEngineJButton);
+        buttonEquals.addActionListener(calculatorEngineJButton);
     }
 
     /**
