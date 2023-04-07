@@ -54,12 +54,11 @@ public class CalculatorEngineJButton implements ActionListener {
             parent.displayField.setText("");
         } else if (src == parent.buttonDivision) {
             selectedAction = '/';
-            if (dispFieldText.equals("")){
+            if (dispFieldText.equals("")) {
                 JOptionPane.showConfirmDialog(null,
                         "На ноль делить нельзя",
                         "Just a test",
                         JOptionPane.PLAIN_MESSAGE);
-                System.out.println("На ноль делить нельзя");
             } else {
                 currentResult = displayValue;
                 parent.displayField.setText("");
@@ -81,8 +80,8 @@ public class CalculatorEngineJButton implements ActionListener {
                 currentResult -= displayValue;
                 parent.displayField.setText("" + currentResult);
             } else if (selectedAction == '/') {
-                    currentResult /= displayValue;
-                    parent.displayField.setText("" + currentResult);
+                currentResult /= displayValue;
+                parent.displayField.setText("" + currentResult);
             } else if (selectedAction == '*') {
                 currentResult *= displayValue;
                 parent.displayField.setText("" + currentResult);
