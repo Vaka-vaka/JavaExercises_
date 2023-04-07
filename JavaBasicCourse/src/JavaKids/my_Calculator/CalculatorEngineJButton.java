@@ -15,7 +15,7 @@ public class CalculatorEngineJButton implements ActionListener {
     Calculator parent; //ссылка на окно калькулятора
 
     char selectedAction = ' '; // +, -, /, или *
-    double currentResult = 0;
+    int currentResult = 0;
 
     // Конструктор сохраняет ссылку на окно калькулятора
     // в переменной экземпляра класса
@@ -29,15 +29,14 @@ public class CalculatorEngineJButton implements ActionListener {
         JButton clickedJButton = (JButton) e.getSource();
         String dispFieldText = parent.displayField.getText();
 
-        double displayValue = 0;
+        int displayValue = 0;
 
         // Получить число из дисплея калькулятора,
         // если он не пустой.
         // Восклицательный знак – это оператор отрицания
         if (!"".equals(dispFieldText)) {
-            displayValue = Double.parseDouble(dispFieldText);
+            displayValue = Integer.parseInt(dispFieldText);
         }
-
 
         Object src = e.getSource();
         // Для каждой кнопки арифметического действия
@@ -46,17 +45,35 @@ public class CalculatorEngineJButton implements ActionListener {
         // для ввода нового числа
         if (src == parent.buttonPlus) {
             selectedAction = '+';
+            if (dispFieldText.equals("")) {
+                JOptionPane.showConfirmDialog(null,
+                        "Не зрозуміло, що додовати",
+                        "Just a test",
+                        JOptionPane.PLAIN_MESSAGE);
+            } else {
+                currentResult = displayValue;
+                parent.displayField.setText("");
+            }
             currentResult = displayValue;
             parent.displayField.setText("");
         } else if (src == parent.buttonMinus) {
             selectedAction = '-';
+            if (dispFieldText.equals("")) {
+                JOptionPane.showConfirmDialog(null,
+                        "Не зрозуміло, що віднімати",
+                        "Just a test",
+                        JOptionPane.PLAIN_MESSAGE);
+            } else {
+                currentResult = displayValue;
+                parent.displayField.setText("");
+            }
             currentResult = displayValue;
             parent.displayField.setText("");
         } else if (src == parent.buttonDivision) {
             selectedAction = '/';
             if (dispFieldText.equals("")) {
                 JOptionPane.showConfirmDialog(null,
-                        "На ноль делить нельзя",
+                        "Не зрозуміло, що ділити",
                         "Just a test",
                         JOptionPane.PLAIN_MESSAGE);
             } else {
@@ -65,8 +82,15 @@ public class CalculatorEngineJButton implements ActionListener {
             }
         } else if (src == parent.buttonMultiplication) {
             selectedAction = '*';
-            currentResult = displayValue;
-            parent.displayField.setText("");
+            if (dispFieldText.equals("")) {
+                JOptionPane.showConfirmDialog(null,
+                        "Не зрозуміло, що множити",
+                        "Just a test",
+                        JOptionPane.PLAIN_MESSAGE);
+            } else {
+                currentResult = displayValue;
+                parent.displayField.setText("");
+            }
         } else if (src == parent.buttonEquals) {
             // Совершить арифметическое действие, в зависимости
             // от selectedAction, обновить переменную currentResult

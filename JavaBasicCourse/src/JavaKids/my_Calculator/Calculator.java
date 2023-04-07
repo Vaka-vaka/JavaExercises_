@@ -14,7 +14,7 @@ public class Calculator {
     JPanel windowContent;
     JTextField displayField;
     JButton[] numButtons;
-    JButton buttonPoint;
+    JButton buttonComa;
     JButton buttonEquals;
     JButton buttonPlus;
     JButton buttonMinus;
@@ -35,9 +35,11 @@ public class Calculator {
         //Задаём схему для этой панели
         displayField = new JTextField(40);
         windowContent.add("North", displayField);
+        //Выравнивание текста в поле по правому краю
+        displayField.setHorizontalAlignment(JTextField.RIGHT);
 
-        buttonPoint = new JButton(",");
-        buttonPoint.setBackground(Color.cyan);
+        buttonComa = new JButton(",");
+        buttonComa.setBackground(Color.cyan);
         buttonEquals = new JButton("=");
         buttonEquals.setBackground(Color.cyan);
         buttonMultiplication = new JButton("*");
@@ -72,7 +74,7 @@ public class Calculator {
         }
 
         // Добавляем кнопки на панель p1
-        pl.add(buttonPoint);
+        pl.add(buttonComa);
         pl.add(buttonEquals);
 
         // Добавляем кнопки на панель p2
@@ -99,7 +101,7 @@ public class Calculator {
         buttonPlus.addActionListener(calculatorEngineJButton);
         buttonMinus.addActionListener(calculatorEngineJButton);
         buttonDivision.addActionListener(calculatorEngineJButton);
-        buttonPoint.addActionListener(calculatorEngineJButton);
+        buttonComa.addActionListener(calculatorEngineJButton);
         buttonMultiplication.addActionListener(calculatorEngineJButton);
         buttonEquals.addActionListener(calculatorEngineJButton);
     }
