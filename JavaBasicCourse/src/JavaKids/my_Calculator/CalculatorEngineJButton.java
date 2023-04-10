@@ -54,8 +54,6 @@ public class CalculatorEngineJButton implements ActionListener {
                 currentResult = displayValue;
                 parent.displayField.setText("");
             }
-            currentResult = displayValue;
-            parent.displayField.setText("");
         } else if (src == parent.buttonMinus) {
             selectedAction = '-';
             if (dispFieldText.equals("")) {
