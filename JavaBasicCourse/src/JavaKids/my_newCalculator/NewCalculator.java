@@ -10,7 +10,7 @@ package JavaKids.my_newCalculator;
 import javax.swing.*;
 import java.awt.*;
 
-public class NewCalculator extends JFrame {
+public class NewCalculator {
     JFrame jFrame = new JFrame("Calculator"); //form
 
     //Создание панели для кнопок грид лояут(Менеджер расположения)
@@ -43,9 +43,6 @@ public class NewCalculator extends JFrame {
     JButton bt_Minus = new JButton("-");
 
     public NewCalculator() {
-//        double[] first_value = {0};
-//        double second_value = 0;
-//        String[] operation = {"+"};
 
         jFrame.setSize(330, 300);
 
