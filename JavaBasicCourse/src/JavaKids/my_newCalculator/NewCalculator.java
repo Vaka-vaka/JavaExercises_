@@ -9,6 +9,8 @@ package JavaKids.my_newCalculator;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class NewCalculator {
     JFrame jFrame = new JFrame("Calculator"); //form
@@ -43,6 +45,9 @@ public class NewCalculator {
     JButton bt_Minus = new JButton("-");
 
     public NewCalculator() {
+        double[] first_value = {0};
+        double second_value = 0;
+        String[] operation = {"+"};
 
         jFrame.setSize(330, 300);
 
@@ -121,7 +126,7 @@ public class NewCalculator {
         bt_Delete.addActionListener(engine);
 
         //Обработчики события "Нажатие на кнопку"
-        //ActionListener - слушатель
+       // ActionListener - слушатель
 //        bt0.addActionListener(e -> jTextField.setText(jTextField.getText() + "0"));
 //        bt1.addActionListener(e -> jTextField.setText(jTextField.getText() + "1"));
 //        bt2.addActionListener(e -> jTextField.setText(jTextField.getText() + "2"));
@@ -151,7 +156,6 @@ public class NewCalculator {
 //            } catch (Exception e1) {
 //                jTextField.setText(jTextField.getText() + "Пусто!");
 //            }
-//            System.out.println(temp);
 //        });
 //
 ////        Работаем с кнопками операции
