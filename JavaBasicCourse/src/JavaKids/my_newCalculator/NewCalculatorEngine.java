@@ -26,7 +26,11 @@ public class NewCalculatorEngine implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // Получить источник действия
         JButton clickedJButton = (JButton) e.getSource();
-        String jPlayField = parent.jTextField.getText();
+        String jPlayField = parent.jTextField.getText();;
+            if (jPlayField.contains(".")) {
+                parent.jTextField.setText(jPlayField.substring(0, jPlayField.length()-1));
+            }
+
 
         double displayValue = 0;
 
@@ -42,11 +46,12 @@ public class NewCalculatorEngine implements ActionListener {
         // запомнить его: +, -, /, или *, сохранить текущее число
         // в переменной currentResult, и очистить дисплей
         // для ввода нового числа
+
         if (src == parent.bt_Plus) {
             selectedAction = '+';
             if (jPlayField.equals("")) {
                 JOptionPane.showConfirmDialog(null,
-                        "Не зрозуміло, що додовати",
+                        "Не зрозуміло, що додавати",
                         "Just a test",
                         JOptionPane.PLAIN_MESSAGE);
             } else {
@@ -104,12 +109,15 @@ public class NewCalculatorEngine implements ActionListener {
             } else if (selectedAction == '*') {
                 currentResult *= displayValue;
                 parent.jTextField.setText("" + currentResult);
-            } else {
-                // Для всех цифровых кнопок присоединить надпись на
-                // кнопке к надписи в дисплее
-                String clickedJButtonLabel = clickedJButton.getText();
-                parent.jTextField.setText(jPlayField + clickedJButtonLabel);
             }
+        } else {
+            // Для всех цифровых кнопок присоединить надпись на
+            // кнопке к надписи в дисплее
+            String clickedJButtonLabel = clickedJButton.getText();
+            parent.jTextField.setText(jPlayField + clickedJButtonLabel);
+            System.out.println(jPlayField);
+            System.out.println(clickedJButtonLabel);
+            System.out.println("=====");
         }
     }
 }
