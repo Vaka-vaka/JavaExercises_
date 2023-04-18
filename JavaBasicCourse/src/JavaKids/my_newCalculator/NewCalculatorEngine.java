@@ -26,11 +26,10 @@ public class NewCalculatorEngine implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // Получить источник действия
         JButton clickedJButton = (JButton) e.getSource();
-        String jPlayField = parent.jTextField.getText();;
-            if (jPlayField.contains(".")) {
-                parent.jTextField.setText(jPlayField.substring(0, jPlayField.length()-1));
-            }
-
+        String jPlayField = parent.jTextField.getText();
+        if(!clickedJButton.equals(".")){
+            parent.jTextField.setText(parent.jTextField.getText() + ".");
+        }
 
         double displayValue = 0;
 
@@ -115,8 +114,8 @@ public class NewCalculatorEngine implements ActionListener {
             // кнопке к надписи в дисплее
             String clickedJButtonLabel = clickedJButton.getText();
             parent.jTextField.setText(jPlayField + clickedJButtonLabel);
-            System.out.println(jPlayField);
-            System.out.println(clickedJButtonLabel);
+            System.out.print("jPlayField = " + jPlayField);
+            System.out.println("clickedJButtonLabel = " + clickedJButtonLabel);
             System.out.println("=====");
         }
     }
