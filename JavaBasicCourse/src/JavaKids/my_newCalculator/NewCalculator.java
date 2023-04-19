@@ -46,7 +46,6 @@ public class NewCalculator {
 
     public NewCalculator() {
         double[] first_value = {0};
-        double second_value = 0;
         String[] operation = {"+"};
 
         jFrame.setSize(330, 300);

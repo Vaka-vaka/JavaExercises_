@@ -27,9 +27,6 @@ public class NewCalculatorEngine implements ActionListener {
         // Получить источник действия
         JButton clickedJButton = (JButton) e.getSource();
         String jPlayField = parent.jTextField.getText();
-        if(!clickedJButton.equals(".")){
-            parent.jTextField.setText(parent.jTextField.getText() + ".");
-        }
 
         double displayValue = 0;
 
@@ -56,6 +53,20 @@ public class NewCalculatorEngine implements ActionListener {
             } else {
                 currentResult = displayValue;
                 parent.jTextField.setText("");
+            }
+        } else if (src == parent.bt_Coma) {
+            selectedAction = '.';
+            currentResult = displayValue;
+            if (!jPlayField.contains(".")) {
+                parent.jTextField.setText(jPlayField + ".");
+            }
+        } else if (src == parent.bt_Delete) {
+            selectedAction = '<';
+            currentResult = displayValue;
+            try {
+                parent.jTextField.setText(jPlayField.substring(0, jPlayField.length() - 1));
+            } catch (Exception e1) {
+                parent.jTextField.setText(jPlayField + "Пусто!");
             }
         } else if (src == parent.bt_Minus) {
             selectedAction = '-';
@@ -114,9 +125,6 @@ public class NewCalculatorEngine implements ActionListener {
             // кнопке к надписи в дисплее
             String clickedJButtonLabel = clickedJButton.getText();
             parent.jTextField.setText(jPlayField + clickedJButtonLabel);
-            System.out.print("jPlayField = " + jPlayField);
-            System.out.println("clickedJButtonLabel = " + clickedJButtonLabel);
-            System.out.println("=====");
         }
     }
 }
