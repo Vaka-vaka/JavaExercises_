@@ -17,6 +17,7 @@ public class NewCalculator {
 
     //Создание панели для кнопок грид лояут(Менеджер расположения)
     JPanel panel = new JPanel(new GridLayout(4, 4, 5, 5));
+    JPanel panel2 = new JPanel(new GridLayout(1, 1));
     JPanel button_equal = new JPanel(new BorderLayout(1, 1));
 
     //Создаем панель для текста
@@ -43,6 +44,7 @@ public class NewCalculator {
     JButton bt_Equals = new JButton("=");
     JButton bt_Plus = new JButton("+");
     JButton bt_Minus = new JButton("-");
+    JButton bt_Update = new JButton("C");
 
     public NewCalculator() {
         double[] first_value = {0};
@@ -69,6 +71,7 @@ public class NewCalculator {
         bt_Equals.setFont(new Font("Tahoma", Font.BOLD, 20));
         bt_Plus.setFont(new Font("Tahoma", Font.BOLD, 15));
         bt_Minus.setFont(new Font("Tahoma", Font.BOLD, 20));
+        bt_Update.setFont(new Font("Tahoma", Font.BOLD, 20));
 
         //Добавление кнопки на панель
         panel.add(bt7);
@@ -87,10 +90,12 @@ public class NewCalculator {
         panel.add(bt0);
         panel.add(bt_Plus);
         panel.add(bt_Minus);
+        panel2.add(bt_Update);
         button_equal.add(bt_Equals);
 
         //цвет панели
         panel.setBackground(Color.cyan);
+        panel2.setBackground(Color.cyan);
 
         //Добавляем текстовое поле на панель
         panel_text.add(jTextField, BorderLayout.NORTH);
@@ -101,6 +106,7 @@ public class NewCalculator {
         //Добавляем панель кнопок на форму
         jFrame.add(panel, BorderLayout.CENTER);
         jFrame.add(button_equal, BorderLayout.SOUTH);
+        jFrame.add(panel2, BorderLayout.EAST);
 
         //Видимость формы
         jFrame.setVisible(true);
@@ -123,9 +129,10 @@ public class NewCalculator {
         bt_Coma.addActionListener(engine);
         bt_Equals.addActionListener(engine);
         bt_Delete.addActionListener(engine);
+        bt_Update.addActionListener(engine);
 
         //Обработчики события "Нажатие на кнопку"
-       // ActionListener - слушатель
+        // ActionListener - слушатель
 //        bt0.addActionListener(e -> jTextField.setText(jTextField.getText() + "0"));
 //        bt1.addActionListener(e -> jTextField.setText(jTextField.getText() + "1"));
 //        bt2.addActionListener(e -> jTextField.setText(jTextField.getText() + "2"));

@@ -54,6 +54,9 @@ public class NewCalculatorEngine implements ActionListener {
                 currentResult = displayValue;
                 parent.jTextField.setText("");
             }
+        } else if (src == parent.bt_Update) {
+            selectedAction = 'C';
+            parent.jTextField.setText("");
         } else if (src == parent.bt_Coma) {
             selectedAction = '.';
             currentResult = displayValue;
