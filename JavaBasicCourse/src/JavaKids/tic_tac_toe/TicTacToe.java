@@ -340,7 +340,7 @@ public class TicTacToe extends Applet implements ActionListener {
     /**
      * Этот метод выделяет выигравшую линию.
      *
-     * @paramпервая, вторая и третья клетки для выделения
+     * @paramet первая, вторая и третья клетки для выделения
      */
     void highlightWinner(int win1, int win2, int win3) {
         squares[win1].setBackground(Color.CYAN);
@@ -356,7 +356,7 @@ public class TicTacToe extends Applet implements ActionListener {
         }
     }
 
-    public static void main(String[] args) {
-        new TicTacToe();
-    }
+//    public static void main(String[] args) {
+//        new TicTacToe();
+//    }
 } // конец класса
