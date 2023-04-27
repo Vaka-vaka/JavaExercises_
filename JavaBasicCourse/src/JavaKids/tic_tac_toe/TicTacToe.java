@@ -8,13 +8,13 @@
 
 package JavaKids.tic_tac_toe;
 
-import java.applet.*;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class TicTacToe extends Applet implements ActionListener {
-    Button squares[];
-    Button newGameButton;
+public class TicTacToe extends JButton implements ActionListener {
+    JButton squares[];
+    JButton newGameButton;
     Label score;
     int emptySquaresLeft = 9;
 
@@ -36,25 +36,25 @@ public class TicTacToe extends Applet implements ActionListener {
         // Создаем кнопку “New Game” и регистрируем в ней
         // слушатель действия
 
-        newGameButton = new Button("New Game");
+        newGameButton = new JButton("New Game");
         newGameButton.addActionListener(this);
-        Panel topPanel = new Panel();
+        JPanel topPanel = new JPanel();
         topPanel.add(newGameButton);
         this.add(topPanel, "North");
-        Panel centerPanel = new Panel();
+        JPanel centerPanel = new JPanel();
         centerPanel.setLayout(new GridLayout(3, 3));
         this.add(centerPanel, "Center");
         score = new Label("Your turn!");
         this.add(score, "South");
 
         // создаем массив, чтобы хранить ссылки на 9 кнопок
-        squares = new Button[9];
+        squares = new JButton[9];
 
         // Создаем кнопки, сохраняем ссылки на них в массиве
         // регистрируем в них слушатель, красим их
         // в оранжевый цвет и добавляем на панель
         for (int i = 0; i < 9; i++) {
-            squares[i] = new Button();
+            squares[i] = new JButton();
             squares[i].addActionListener(this);
             squares[i].setBackground(Color.ORANGE);
             centerPanel.add(squares[i]);
@@ -69,7 +69,7 @@ public class TicTacToe extends Applet implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Button theButton = (Button) e.getSource();
+        JButton theButton = (JButton) e.getSource();
 
         // Это кнопка New Game?
         if (theButton == newGameButton) {
@@ -123,7 +123,7 @@ public class TicTacToe extends Applet implements ActionListener {
         String theWinner = "";
         emptySquaresLeft--;
         if (emptySquaresLeft == 0) {
-            return "T"; // это ничья. T от английского слова tie
+            return "T"; // это ничья от английского слова tie
         }
 
         // Проверяем ряд 1 – элементы массива 0,1,2

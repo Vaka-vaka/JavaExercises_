@@ -9,8 +9,6 @@ package JavaKids.my_newCalculator;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class NewCalculator {
     JFrame jFrame = new JFrame("Calculator"); //form
@@ -47,9 +45,6 @@ public class NewCalculator {
     JButton bt_Update = new JButton("C");
 
     public NewCalculator() {
-        double[] first_value = {0};
-        String[] operation = {"+"};
-
         jFrame.setSize(330, 300);
 
         //Обработка щелчка на системной кнопке закрытия окна
@@ -130,95 +125,6 @@ public class NewCalculator {
         bt_Equals.addActionListener(engine);
         bt_Delete.addActionListener(engine);
         bt_Update.addActionListener(engine);
-
-        //Обработчики события "Нажатие на кнопку"
-        // ActionListener - слушатель
-//        bt0.addActionListener(e -> jTextField.setText(jTextField.getText() + "0"));
-//        bt1.addActionListener(e -> jTextField.setText(jTextField.getText() + "1"));
-//        bt2.addActionListener(e -> jTextField.setText(jTextField.getText() + "2"));
-//        bt3.addActionListener(e -> jTextField.setText(jTextField.getText() + "3"));
-//        bt4.addActionListener(e -> jTextField.setText(jTextField.getText() + "4"));
-//        bt5.addActionListener(e -> jTextField.setText(jTextField.getText() + "5"));
-//        bt6.addActionListener(e -> jTextField.setText(jTextField.getText() + "6"));
-//        bt7.addActionListener(e -> jTextField.setText(jTextField.getText() + "7"));
-//        bt8.addActionListener(e -> jTextField.setText(jTextField.getText() + "8"));
-//        bt9.addActionListener(e -> jTextField.setText(jTextField.getText() + "9"));
-//        bt_Coma.addActionListener(new ActionListener() {
-//            String text;
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                text = jTextField.getText();
-//                if (!text.contains(".")) {
-//                    jTextField.setText(jTextField.getText() + ".");
-//                }
-//            }
-//        });
-//        //При нажатии на "C" удаляем последнюю цифру
-//        bt_Delete.addActionListener(e -> {
-//            String temp = jTextField.getText();
-//            //обрабатываем исключение, чтобы не было возможности стереть пустое значение
-//            try {
-//                jTextField.setText(temp.substring(0, temp.length() - 1));
-//            } catch (Exception e1) {
-//                jTextField.setText(jTextField.getText() + "Пусто!");
-//            }
-//        });
-//
-////        Работаем с кнопками операции
-////        Для каждого арифметического действия запомнить его, сохранить текущее число в переменной first_value и
-////        сбрасывать число для ввода нового
-//        bt_Minus.addActionListener(e -> {
-//            try {
-//                first_value[0] = Double.parseDouble(jTextField.getText());
-//            } catch (Exception ignored) {
-//            }
-//            jTextField.setText("");
-//            operation[0] = "-";
-//        });
-//        bt_Division.addActionListener(e -> {
-//            try {
-//                first_value[0] = Double.parseDouble(jTextField.getText());
-//            } catch (Exception ignored) {
-//            }
-//            jTextField.setText("");
-//            operation[0] = "/";
-//        });
-//        bt_Multiplication.addActionListener(e -> {
-//            try {
-//                first_value[0] = Double.parseDouble(jTextField.getText());
-//            } catch (Exception ignored) {
-//            }
-//            jTextField.setText("");
-//            operation[0] = "*";
-//        });
-//        bt_Plus.addActionListener(e -> {
-//            try {
-//                first_value[0] = Double.parseDouble(jTextField.getText());
-//            } catch (Exception ignored) {
-//            }
-//            jTextField.setText("");
-//            operation[0] = "+";
-//        });
-//
-//        // При нажатии на равно, считаем второе значение с текстового поля
-//        bt_Equals.addActionListener(e -> {
-//            try {
-//                double secondValue = Double.parseDouble(jTextField.getText());
-//                if ("+".equals(operation[0])) {
-//                    jTextField.setText((first_value[0] + secondValue) + "");
-//                }
-//                if ("-".equals(operation[0])) {
-//                    jTextField.setText((first_value[0] - secondValue) + "");
-//                }
-//                if ("/".equals(operation[0])) {
-//                    jTextField.setText((first_value[0] / secondValue) + "");
-//                }
-//                if ("*".equals(operation[0])) {
-//                    jTextField.setText((first_value[0] * secondValue) + "");
-//                }
-//            } catch (Exception ignored) {
-//            }
-//        });
     }
 
     /**

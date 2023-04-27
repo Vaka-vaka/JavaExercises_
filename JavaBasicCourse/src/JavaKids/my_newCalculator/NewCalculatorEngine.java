@@ -43,23 +43,10 @@ public class NewCalculatorEngine implements ActionListener {
         // в переменной currentResult, и очистить дисплей
         // для ввода нового числа
 
-        if (src == parent.bt_Plus) {
-            selectedAction = '+';
-            if (jPlayField.equals("")) {
-                JOptionPane.showConfirmDialog(null,
-                        "Не зрозуміло, що додавати",
-                        "Just a test",
-                        JOptionPane.PLAIN_MESSAGE);
-            } else {
-                currentResult = displayValue;
-                parent.jTextField.setText("");
-            }
-        } else if (src == parent.bt_Update) {
+        if (src == parent.bt_Update) {
             selectedAction = 'C';
             parent.jTextField.setText("");
         } else if (src == parent.bt_Coma) {
-            selectedAction = '.';
-            currentResult = displayValue;
             if (!jPlayField.contains(".")) {
                 parent.jTextField.setText(jPlayField + ".");
             }
@@ -70,6 +57,17 @@ public class NewCalculatorEngine implements ActionListener {
                 parent.jTextField.setText(jPlayField.substring(0, jPlayField.length() - 1));
             } catch (Exception e1) {
                 parent.jTextField.setText(jPlayField + "Пусто!");
+            }
+        } else if (src == parent.bt_Plus) {
+            selectedAction = '+';
+            if (jPlayField.equals("")) {
+                JOptionPane.showConfirmDialog(null,
+                        "Не зрозуміло, що додавати",
+                        "Just a test",
+                        JOptionPane.PLAIN_MESSAGE);
+            } else {
+                currentResult = displayValue;
+                parent.jTextField.setText("");
             }
         } else if (src == parent.bt_Minus) {
             selectedAction = '-';
