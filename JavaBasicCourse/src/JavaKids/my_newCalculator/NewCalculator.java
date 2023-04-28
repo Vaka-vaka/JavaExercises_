@@ -37,7 +37,7 @@ public class NewCalculator {
     JButton bt2 = new JButton("2");
     JButton bt3 = new JButton("3");
     JButton bt_Multiplication = new JButton("*");
-    JButton bt_Coma = new JButton(".");
+    JButton bt_Coma = new JButton(",");
     JButton bt0 = new JButton("0");
     JButton bt_Equals = new JButton("=");
     JButton bt_Plus = new JButton("+");
