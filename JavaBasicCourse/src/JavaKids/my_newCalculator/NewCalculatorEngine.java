@@ -34,7 +34,15 @@ public class NewCalculatorEngine implements ActionListener {
         // если он не пустой.
         // Восклицательный знак – это оператор отрицания
         if (!"".equals(jPlayField)) {
-            displayValue = Double.parseDouble(jPlayField);
+            try {
+                displayValue = Double.parseDouble(jPlayField);
+            } catch (NumberFormatException e1) {
+                //e1.printStackTrace();
+                javax.swing.JOptionPane.showConfirmDialog(null,
+                        "Пожалуйста, введите число", "Неправильный вывод",
+                        javax.swing.JOptionPane.PLAIN_MESSAGE);
+                return;
+            }
         }
 
         Object src = e.getSource();

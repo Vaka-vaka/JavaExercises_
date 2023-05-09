@@ -45,7 +45,7 @@ public class NewCalculator {
     JButton bt_Update = new JButton("C");
 
     public NewCalculator() {
-        jFrame.setSize(330, 300);
+         jFrame.setSize(330, 300);
 
         //Обработка щелчка на системной кнопке закрытия окна
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
