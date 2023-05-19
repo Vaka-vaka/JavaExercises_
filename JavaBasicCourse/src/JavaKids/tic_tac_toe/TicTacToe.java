@@ -10,74 +10,67 @@ package JavaKids.tic_tac_toe;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class TicTacToe {
     JButton squares[];
     JButton newGameButton;
-    Label score;
+    JLabel score;
     int emptySquaresLeft = 9;
 
-    // form
-    JFrame jFrame = new JFrame("TicTacToe");
+    static JFrame jFrame = getFrame();
+    static JPanel topPanel = new JPanel();
+    static JPanel centerPanel = new JPanel();
 
-    // Создание панели для кнопок грид лояут(Менеджер расположения)
-    JPanel jPanel = new JPanel(new GridLayout(3, 3));
-
-    JButton bt_1 = new JButton("1");
-    JButton bt_2 = new JButton("2");
-    JButton bt_3 = new JButton("3");
-    JButton bt_4 = new JButton("4");
-    JButton bt_5 = new JButton("5");
-    JButton bt_6 = new JButton("6");
-    JButton bt_7 = new JButton("7");
-    JButton bt_8 = new JButton("8");
-    JButton bt_9 = new JButton("9");
-
-    public TicTacToe() {
-        jFrame.setSize(500, 500);
-
-        //Обработка щелчка на системной кнопке закрытия окна
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jFrame.setLocationRelativeTo(null);
+    public TicTacToe(){
+        TicTacToeEngine toeEngine = new TicTacToeEngine(this);
         jFrame.setLayout(new BorderLayout());
+        jFrame.setBackground(Color.CYAN);
 
-        //Задаем вид и размер шрифта кнопок
-        bt_1.setFont(new Font("Tahoma", Font.BOLD, 10));
-        bt_2.setFont(new Font("Tahoma", Font.BOLD, 10));
-        bt_3.setFont(new Font("Tahoma", Font.BOLD, 10));
-        bt_4.setFont(new Font("Tahoma", Font.BOLD, 10));
-        bt_5.setFont(new Font("Tahoma", Font.BOLD, 10));
-        bt_6.setFont(new Font("Tahoma", Font.BOLD, 10));
-        bt_7.setFont(new Font("Tahoma", Font.BOLD, 10));
-        bt_8.setFont(new Font("Tahoma", Font.BOLD, 10));
-        bt_9.setFont(new Font("Tahoma", Font.BOLD, 10));
+        // Изменяем шрифт апплета так, чтобы он был жирным и имел размер 20
+        Font font = new Font("Monospased", Font.BOLD, 20);
+        jFrame.setFont(font);
+        Font font2 = new Font("Tahoma", Font.BOLD, 50);
+        topPanel.setFont(font2);
+        centerPanel.setFont(font);
 
-        //Добавление кнопки на панель
-        jPanel.add(bt_1);
-        jPanel.add(bt_2);
-        jPanel.add(bt_3);
-        jPanel.add(bt_4);
-        jPanel.add(bt_5);
-        jPanel.add(bt_6);
-        jPanel.add(bt_7);
-        jPanel.add(bt_8);
-        jPanel.add(bt_9);
+        // Создаем кнопку “New Game” и регистрируем в ней
+        // слушатель действия
+        jFrame.add(topPanel);
+        newGameButton = new JButton("New Game");
+        topPanel.add(newGameButton);
+        newGameButton.addActionListener(toeEngine);
+        jFrame.add(topPanel, "North");
 
-        //цвет панели
-        jPanel.setBackground(Color.cyan);
+        centerPanel.setLayout(new GridLayout(3, 3));
+        jFrame.add(centerPanel, "Center");
+        score = new JLabel("Your turn!");
+        jFrame.add(score, "South");
 
-        //Добавляем панель кнопок на форму
-        jFrame.add(jPanel, BorderLayout.CENTER);
+        // создаем массив, чтобы хранить ссылки на 9 кнопок
+        squares = new JButton[9];
 
-        // делаем размер окна достаточным
-        // для того, чтобы вместить все компоненты
-        jFrame.pack();
+        // Создаем кнопки, сохраняем ссылки на них в массиве
+        // регистрируем в них слушатель, красим их
+        // в оранжевый цвет и добавляем на панель
+        for (int i = 0; i < 9; i++) {
+            squares[i] = new JButton();
+            squares[i].addActionListener(toeEngine);
+            squares[i].setBackground(Color.ORANGE);
+            centerPanel.add(squares[i]);
+        }
+    }
 
-        //Видимость формы
+    static JFrame getFrame() {
+        JFrame jFrame = new JFrame("TicTacToe") {
+        };
         jFrame.setVisible(true);
+        jFrame.setBounds(600, 99, 650, 500);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        return jFrame;
     }
 
     public static void main(String[] args) {
-        new TicTacTae();
+        new TicTacToe();
     }
 }
