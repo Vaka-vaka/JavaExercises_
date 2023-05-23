@@ -38,6 +38,7 @@ public class BuyingBikes {
 
         //Добавление кнопки на панель
         JLabel jLabelM = new JLabel("Модель велосипеда");
+
         panel.add(jLabelM);
         panel.add(jTextField);
         jTextField.getText();
