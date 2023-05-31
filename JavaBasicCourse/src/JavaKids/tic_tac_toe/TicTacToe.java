@@ -10,7 +10,6 @@ package JavaKids.tic_tac_toe;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 
 public class TicTacToe {
     JButton squares[];
