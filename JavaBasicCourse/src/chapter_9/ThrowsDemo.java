@@ -7,8 +7,6 @@
 
 package chapter_9;
 
-import java.util.jar.JarException;
-
 public class ThrowsDemo {
     public static char prompt(String str)
             throws java.io.IOException {
@@ -16,6 +14,11 @@ public class ThrowsDemo {
         return (char) System.in.read();
     }
 
+    /**
+     * Program entry point.
+     *
+     * @param args command Line arguments
+     */
     public static void main(String[] args) {
         char ch;
 
