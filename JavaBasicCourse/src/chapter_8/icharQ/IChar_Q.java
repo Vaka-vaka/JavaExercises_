@@ -8,12 +8,15 @@
 
 package chapter_8.icharQ;
 
+import chapter_9.QueueEmptyException;
+import chapter_9.QueueFullException;
+
 public interface IChar_Q {
     // Помещение символа в очередь
-    void put(char ch);
+    void put(char ch) throws QueueFullException;
 
     //Извлечение символа из очереди
-    char get();
+    char get() throws QueueEmptyException;
 
     // сбрасывающий очередь в исходное состояние
     void reset();

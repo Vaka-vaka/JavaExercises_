@@ -12,6 +12,8 @@ import chapter_8.qpack.CircularQueue;
 import chapter_8.qpack.DynQueue;
 import chapter_8.qpack.FixedQueue;
 import chapter_8.icharQ.IChar_Q;
+import chapter_9.QueueEmptyException;
+import chapter_9.QueueFullException;
 
 class IQDemo {
     /**
@@ -19,7 +21,7 @@ class IQDemo {
      *
      * @param args command Line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws QueueEmptyException, QueueFullException {
         FixedQueue q1 = new FixedQueue(10);
         DynQueue q2 = new DynQueue(5);
         CircularQueue q3 = new CircularQueue(10);
