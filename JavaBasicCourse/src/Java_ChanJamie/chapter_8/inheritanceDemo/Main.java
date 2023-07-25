@@ -38,17 +38,18 @@ public class Main {
         clubMemers[3] = new VIPMember("AndriyV", 15, 2019);
         clubMemers[4] = new VIPMember("ZenyaV", 6, 2020);
         clubMemers[5] = new JenMember("Zenya", 6, 2020);
-        clubMemers[6] = new Member("Member", 1, 2222);
+        clubMemers[6] = new VIPMember("VIPMember", 1, 2222);
 
-      for (int i = 0; i < clubMemers.length; i++){
-          clubMemers[i].calculateAnnualFee();
-          clubMemers[i].displayMemInfo();
-          System.out.println();
-      }
+//      for (int i = 0; i < clubMemers.length; i++){
+//          clubMemers[i].calculateAnnualFee();
+//          clubMemers[i].displayMemInfo();
+//          System.out.println();
+//      }
 
-      for (Member m: clubMemers){
-          m.calculateAnnualFee();
-          m.displayMemInfo();
-      }
+        for (Member m : clubMemers) {
+            m.calculateAnnualFee();
+            m.displayMemInfo();
+            System.out.println();
+        }
     }
 }

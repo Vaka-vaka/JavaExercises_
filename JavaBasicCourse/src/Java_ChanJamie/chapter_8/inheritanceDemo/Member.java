@@ -9,7 +9,7 @@ package Java_ChanJamie.chapter_8.inheritanceDemo;
 
 import java.util.Scanner;
 
-public class Member {
+abstract public class Member {
         //Первое — открытое поле для хранения приветственного
         //сообщения. Оно инициализируется строкой «Welcome
         //to ABC Fitness».
@@ -63,7 +63,5 @@ public class Member {
 
         //Он будет использован для вычисления размера
         //ежегодной оплаты для посетителя клуба
-        public void calculateAnnualFee() {
-                annualFee = 0;
-        }
+        abstract public void calculateAnnualFee();
 }
