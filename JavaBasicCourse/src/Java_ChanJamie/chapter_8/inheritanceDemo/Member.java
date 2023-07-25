@@ -5,7 +5,7 @@
  * @version 1.0 from 20.07.2023
  */
 
-package Java_ChanJamie.chapter_7.inheritanceDemo;
+package Java_ChanJamie.chapter_8.inheritanceDemo;
 
 import java.util.Scanner;
 
@@ -27,9 +27,9 @@ public class Member {
         public Member(String pName, int pMemberID, int pMemberSince) {
                 System.out.println("Parent Constructor with 3 parameters");
 
-                pName = name;
-                pMemberID = memberId;
-                pMemberSince = memberSince;
+                name = pName;
+                memberId = pMemberID;
+                memberSince = pMemberSince;
         }
 
         // Get-метод просто возвращает значение поля discount.

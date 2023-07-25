@@ -5,7 +5,7 @@
  * @version 1.0 from 21.07.2023
  */
 
-package Java_ChanJamie.chapter_7.inheritanceDemo;
+package Java_ChanJamie.chapter_8.inheritanceDemo;
 
 public class NormalMember extends Member {
 
@@ -20,6 +20,6 @@ public class NormalMember extends Member {
 
     @Override
     public void calculateAnnualFee() {
-        annualFee = (1 - 0.01 * getDiscount() * (100 + 12 * 30));
+        annualFee = (1 - 0.01 * getDiscount()) * (100 + 12 * 90);
     }
 }

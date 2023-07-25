@@ -5,7 +5,7 @@
  * @version 1.0 from 22.07.2023
  */
 
-package Java_ChanJamie.chapter_7.inheritanceDemo;
+package Java_ChanJamie.chapter_8.inheritanceDemo;
 
 public class VIPMember extends Member {
     public VIPMember(String pName, int pMemberID, int pMemberSince) {
@@ -15,6 +15,6 @@ public class VIPMember extends Member {
 
     @Override
     public void calculateAnnualFee() {
-        annualFee = (1 - 0.01 * getDiscount()) * 1200;
+        annualFee = (1 - 0.01 * getDiscount()) * 1170;
     }
 }
