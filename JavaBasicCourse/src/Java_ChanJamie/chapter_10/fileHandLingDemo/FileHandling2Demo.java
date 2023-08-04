@@ -20,7 +20,7 @@ public class FileHandling2Demo {
 
         try {
             BufferedReader reader = new BufferedReader(
-                    new FileReader("MyFile2.txt"));
+                    new FileReader("myFile.txt"));
 
             line = reader.readLine();
             while (line != null) {
