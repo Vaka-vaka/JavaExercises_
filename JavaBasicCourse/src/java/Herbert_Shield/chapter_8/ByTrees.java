@@ -7,7 +7,7 @@
  * @version 1.0 from 16.02.2023
  */
 
-package chapter_8;
+package java.Herbert_Shield.chapter_8;
 
 public class ByTrees implements Series {
     int start;

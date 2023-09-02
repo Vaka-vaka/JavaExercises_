@@ -6,7 +6,7 @@
  * @version 1.0 from 17.02.2023
  */
 
-package chapter_8;
+package java.Herbert_Shield.chapter_8;
 
 public class ByTwos3 implements Series {
     int start;

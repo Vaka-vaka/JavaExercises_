@@ -6,9 +6,7 @@
  * @version 1.0 from 14.02.2023
  */
 
-package chapter_8;
-
-import chapter_2.Sound;
+package java.Herbert_Shield.chapter_8;
 
 public class ByTwos implements Series {
     int start;
