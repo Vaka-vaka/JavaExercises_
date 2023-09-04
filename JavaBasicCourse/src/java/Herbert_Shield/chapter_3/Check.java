@@ -1,4 +1,4 @@
-package chapter_3;
+package java.Herbert_Shield.chapter_3;
 
 public class Check {
     public static void main(String[] args) {

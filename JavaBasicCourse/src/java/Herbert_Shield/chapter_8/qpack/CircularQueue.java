@@ -6,9 +6,9 @@
  * @version 1.0 from 24.02.2023
  */
 
-package chapter_8.qpack;
+package java.Herbert_Shield.chapter_8.qpack;
 
-import chapter_8.icharQ.IChar_Q;
+import java.Herbert_Shield.chapter_8.icharQ.IChar_Q;
 
 public class CircularQueue implements IChar_Q {
     private char[] q; //массив для хранения элементов очереди

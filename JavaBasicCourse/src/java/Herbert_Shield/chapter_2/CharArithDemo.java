@@ -6,7 +6,7 @@
  * @version 1.0
  */
 
-package chapter_2;
+package java.Herbert_Shield.chapter_2;
 
 public class CharArithDemo {
     /**
