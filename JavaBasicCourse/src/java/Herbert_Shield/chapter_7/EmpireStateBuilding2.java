@@ -1,42 +1,47 @@
 /**
- * Ліфт Empire State Building
+ * Ліфт Empire State Building2
  *
  * @author Valentyn Mozul
- * @version 1.0 from 01.02.2023
+ * @version 1.0 from 02.02.2023
  */
 
-package chapter_7;
+package java.Herbert_Shield.chapter_7;
 
 import java.util.Scanner;
 
-public class EmpireStateBuilding {
+public class EmpireStateBuilding2 {
     /**
      * Program entry point.
      *
      * @param args command Line arguments
      */
     public static void main(String[] args) {
-        DemoLogin demoLogin = new DemoLogin();
+
+        DemoLogin2 demoLogin2 = new DemoLogin2();
 
         System.out.println("Який поверх!");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
-        if (number < 1 || number > 102){
+
+        if(number >= 1 && number <= 102){
+            if(number > 24 && number < 40){
+                demoLogin2.login();
+            }else {
+                System.out.println("ok");
+            }
+        }else {
             System.out.println("невірний поверх");
-        }else if(number > 39 && number < 102 || number < 24 && number > 0){
-            System.out.println("ok");
-        } else if (number >= 24 && number <= 39) {
-            demoLogin.login();
         }
+
     }
 }
 
-class DemoLogin{
+class DemoLogin2{
     void login(){
         System.out.println("Введіть логін");
         Scanner scanner = new Scanner(System.in);
-        int login1 = scanner.nextInt();
-        if(login1 == 1337){
+        int n = scanner.nextInt();
+        if(n == 1337){
             System.out.println("ok");
         }else {
             System.out.println("невірний пароль");
