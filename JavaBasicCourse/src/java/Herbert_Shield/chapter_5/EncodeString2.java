@@ -6,7 +6,7 @@
  * @version 1.0 from 11.11.2022
  */
 
-package chapter_5;
+package java.Herbert_Shield.chapter_5;
 
 import java.util.Scanner;
 

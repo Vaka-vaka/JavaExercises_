@@ -5,7 +5,7 @@
  * @version 1.0 from 19.11.2022
  */
 
-package chapter_6;
+package java.Herbert_Shield.chapter_6;
 
 public class Err {
     String msg;  // сообщение об ошибке

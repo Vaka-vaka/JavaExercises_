@@ -6,7 +6,7 @@
  * @version 1.0 from 19.03.2023
  */
 
-package chapter_9;
+package java.Herbert_Shield.chapter_9;
 
 public class ExcDemo3 {
     /**
