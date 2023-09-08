@@ -7,7 +7,7 @@
  * @version 1.0 from 27.09.2022
  */
 
-package chapter_4;
+package java.Herbert_Shield.chapter_4;
 
 public class FourVehicles {
     int passengers;

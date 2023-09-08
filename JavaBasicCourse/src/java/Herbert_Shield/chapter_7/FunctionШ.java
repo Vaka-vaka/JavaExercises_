@@ -6,7 +6,7 @@
  * @version 1.0 from 25.01.2023
  */
 
-package chapter_7;
+package java.Herbert_Shield.chapter_7;
 
 public class FunctionШ {
     private int b;
