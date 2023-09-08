@@ -5,9 +5,9 @@
  * @version 1.0 from 09.06.2023
  */
 
-package chapter_9;
+package java.Herbert_Shield.chapter_9;
 
-import chapter_8.icharQ.IChar_Q;
+import java.Herbert_Shield.chapter_8.icharQ.IChar_Q;
 
 // Класс очереди фиксированного размера для символов,
 // использующий исключения
