@@ -6,7 +6,7 @@
  * @version 1.0 from 04.03.2023
  */
 
-package chapter_8;
+package java.Herbert_Shield.chapter_8;
 
 public interface IConst {
     int min = 0;

@@ -6,10 +6,10 @@
  * @version 1.0 from 20.02.2023
  */
 
-package chapter_8.icharQ;
+package java.Herbert_Shield.chapter_8.icharQ;
 
-import chapter_9.QueueEmptyException;
-import chapter_9.QueueFullException;
+import java.Herbert_Shield.chapter_9.QueueEmptyException;
+import java.Herbert_Shield.chapter_9.QueueFullException;
 
 public interface IChar_Q {
     // Помещение символа в очередь

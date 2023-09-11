@@ -6,14 +6,14 @@
  * @version 1.0 from 25.02.2023
  */
 
-package chapter_8.iQDemo;
+package java.Herbert_Shield.chapter_8.iQDemo;
 
-import chapter_8.qpack.CircularQueue;
-import chapter_8.qpack.DynQueue;
-import chapter_8.qpack.FixedQueue;
-import chapter_8.icharQ.IChar_Q;
-import chapter_9.QueueEmptyException;
-import chapter_9.QueueFullException;
+import java.Herbert_Shield.chapter_8.qpack.CircularQueue;
+import java.Herbert_Shield.chapter_8.qpack.DynQueue;
+import java.Herbert_Shield.chapter_8.qpack.FixedQueue;
+import java.Herbert_Shield.chapter_8.icharQ.IChar_Q;
+import java.Herbert_Shield.chapter_9.QueueEmptyException;
+import java.Herbert_Shield.chapter_9.QueueFullException;
 
 class IQDemo {
     /**
