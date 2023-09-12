@@ -5,8 +5,8 @@
  * @version 1.0 from 08.03.2023
  */
 
-package chapter_7;
-import java.lang.*;  //Цей пакет автоматично імпортується у всі програми на мові Java.
+package java.Herbert_Shield.chapter_7;
+
 public interface Ivehicle {
     // Определение дальности поездки транспортного средства
     int range();

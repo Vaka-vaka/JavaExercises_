@@ -5,7 +5,7 @@
  * @version 1.0 from 07.12.2022
  */
 
-package chapter_6;
+package java.Herbert_Shield.chapter_6;
 
 public class LocalClassDemo {
     public static void main(String[] args) {

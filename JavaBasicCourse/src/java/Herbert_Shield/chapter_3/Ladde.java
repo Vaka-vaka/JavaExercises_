@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-package chapter_3;
+package java.Herbert_Shield.chapter_3;
 
 public class Ladde {
     /**
