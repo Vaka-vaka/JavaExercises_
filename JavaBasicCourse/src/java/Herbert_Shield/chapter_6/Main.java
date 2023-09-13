@@ -1,4 +1,4 @@
-package chapter_6;
+package java.Herbert_Shield.chapter_6;
 
 public class Main {
     public static void main(String[] args) {

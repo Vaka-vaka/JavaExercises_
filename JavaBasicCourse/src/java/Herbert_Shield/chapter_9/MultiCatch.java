@@ -9,7 +9,7 @@
  * @version 1.0 from 02.06.2023
  */
 
-package chapter_9;
+package java.Herbert_Shield.chapter_9;
 
 public class MultiCatch {
     /**
