@@ -5,7 +5,7 @@
  * @version 1.0 from 08.06.2023
  */
 
-package chapter_9;
+package java.Herbert_Shield.chapter_9;
 
 // Создание исключения
 public class NonIntResultException extends Exception {

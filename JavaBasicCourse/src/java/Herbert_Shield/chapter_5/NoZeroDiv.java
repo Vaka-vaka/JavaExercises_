@@ -5,7 +5,7 @@
  * @version 1.0 from 08.11.2022
  */
 
-package chapter_5;
+package java.Herbert_Shield.chapter_5;
 
 public class NoZeroDiv {
     /**
