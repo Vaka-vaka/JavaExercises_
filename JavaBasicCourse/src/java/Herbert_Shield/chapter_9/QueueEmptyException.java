@@ -5,7 +5,7 @@
  * @version 1.0 from 09.06.2023
  */
 
-package chapter_9;
+package java.Herbert_Shield.chapter_9;
 
 //Исключение для ошибок, связаннь� с пустой очередью
 public class QueueEmptyException extends Exception {

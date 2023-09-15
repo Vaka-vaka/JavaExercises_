@@ -6,7 +6,7 @@
  * @version 1.0 from 15.11.2022
  */
 
-package chapter_6;
+package java.Herbert_Shield.chapter_6;
 
 public class Queue {
     // Эти члены класса теперь являются закрытыми

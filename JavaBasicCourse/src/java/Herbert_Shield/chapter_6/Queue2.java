@@ -6,7 +6,7 @@
  * @version 1.0 from 21.11.2022
  */
 
-package chapter_6;
+package java.Herbert_Shield.chapter_6;
 
 public class Queue2 {
     private char[] q; // массив для хранения элементов очереди

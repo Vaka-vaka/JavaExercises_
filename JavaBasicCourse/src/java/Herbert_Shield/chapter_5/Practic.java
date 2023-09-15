@@ -1,11 +1,11 @@
 /**
- * Practic chapter_5
+ * Practic java.Herbert_Shield.chapter_5
  *
  * @author Valentyn Mozul
  * @version 1.0 from 12.11.2022
  */
 
-package chapter_5;
+package java.Herbert_Shield.chapter_5;
 
 public class Practic {
 
