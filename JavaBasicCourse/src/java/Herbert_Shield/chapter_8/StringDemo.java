@@ -5,7 +5,7 @@
  * @version 1.0 from 28.02.2023
  */
 
-package chapter_8;
+package java.Herbert_Shield.chapter_8;
 public class StringDemo {
     /**
      * Program entry point.

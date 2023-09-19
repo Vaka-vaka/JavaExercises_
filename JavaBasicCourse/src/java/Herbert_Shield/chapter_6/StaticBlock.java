@@ -5,7 +5,7 @@
  * @version 1.0 from 05.12.2022
  */
 
-package chapter_6;
+package java.Herbert_Shield.chapter_6;
 
 public class StaticBlock {
     static double rootOf2;
