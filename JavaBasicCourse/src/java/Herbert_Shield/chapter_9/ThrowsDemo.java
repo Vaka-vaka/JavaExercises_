@@ -5,7 +5,7 @@
  * @version 1.0 from 01.06.2023
  */
 
-package chapter_9;
+package java.Herbert_Shield.chapter_9;
 
 public class ThrowsDemo {
     public static char prompt(String str)

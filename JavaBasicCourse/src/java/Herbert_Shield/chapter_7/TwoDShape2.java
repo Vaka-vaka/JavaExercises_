@@ -1,21 +1,16 @@
 /**
- * Adding constructors to the TwoDShape4 class
+ * Using access methods to set and
+ * to retrieve values of closed members
  *
  * @author Valentyn Mozul
  * @version 1.0 from 22.12.2022
  */
 
-package chapter_7;
+package java.Herbert_Shield.chapter_7;
 
-public class TwoDShape4 {
+public class TwoDShape2 {
     private double width; //теперь эти переменные
     private double height; //объявлены как закрытые
-
-    // Параметризированный конструктор
-    TwoDShape4(double w, double h) {  //Конструктор класса TwoDShape4
-        width = w;
-        height = h;
-    }
 
     double getWidth() {
         return width;
@@ -34,17 +29,13 @@ public class TwoDShape4 {
     }
 
     void showDim() {
-        System.out.println("Шиpинa и высота - " + width + " и " + height);
+        System.out.println(" Шиpинa и высота - " + width + " и " +
+                height);
     }
 }
 
-class Triangle4 extends TwoDShape4 {
-    private String style;
-
-    Triangle4(String s, double w, double h) {
-        super(w, h);  // Использование оператора super() для вызова конструктора класса TwoDShape4
-        style = s;
-    }
+class Triangle2 extends TwoDShape2 {
+    String style;
 
     double area() {
         return getWidth() * getHeight() / 2;
@@ -55,20 +46,29 @@ class Triangle4 extends TwoDShape4 {
     }
 }
 
-class TwoDShape4Demo {
+class TwoDShape2Demo {
     /**
      * Program entry point.
      *
      * @param args command Line arguments
      */
     public static void main(String[] args) {
-        TwoDShape4 t = new TwoDShape4(1.5, 5.0);
-        System.out.println("Инфopмaция о t :");
+        TwoDShape2 t = new TwoDShape2();
         t.showDim();
-        System.out.println();
+        t.setWidth(1.5);
+        t.setHeight(5.0);
+        t.showDim();
 
-        Triangle4 tr1 = new Triangle4("закрашенный", 10.0, 10.0);
-        Triangle4 tr2 = new Triangle4("контурный", 5.0, 5.0);
+        Triangle2 tr1 = new Triangle2();
+        Triangle2 tr2 = new Triangle2();
+
+        tr1.style = "закрашенный";
+        tr1.setWidth(10.0);
+        tr1.setHeight(10.0);
+
+        tr2.style = "контурный";
+        tr2.setWidth(5.0);
+        tr2.setHeight(5.0);
 
         System.out.println("Инфopмaция о tr1 :");
         tr1.showDim();

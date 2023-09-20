@@ -1,14 +1,13 @@
 /**
- * Using access methods to set and
- * to retrieve values of closed members
+ * Adding a constructor to the Triangle class
  *
  * @author Valentyn Mozul
  * @version 1.0 from 22.12.2022
  */
 
-package chapter_7;
+package java.Herbert_Shield.chapter_7;
 
-public class TwoDShape2 {
+public class TwoDShape3 {
     private double width; //теперь эти переменные
     private double height; //объявлены как закрытые
 
@@ -29,13 +28,18 @@ public class TwoDShape2 {
     }
 
     void showDim() {
-        System.out.println(" Шиpинa и высота - " + width + " и " +
-                height);
+        System.out.println("Шиpинa и высота - " + width + " и " + height);
     }
 }
 
-class Triangle2 extends TwoDShape2 {
-    String style;
+class Triangle3 extends TwoDShape3 {
+    private String style;
+
+    Triangle3(String s, double w, double h) {
+        setWidth(w);
+        setHeight(h);
+        style = s;
+    }
 
     double area() {
         return getWidth() * getHeight() / 2;
@@ -46,29 +50,22 @@ class Triangle2 extends TwoDShape2 {
     }
 }
 
-class TwoDShape2Demo {
+class TwoDShape3Demo {
     /**
      * Program entry point.
      *
      * @param args command Line arguments
      */
     public static void main(String[] args) {
-        TwoDShape2 t = new TwoDShape2();
+        TwoDShape3 t = new TwoDShape3();
         t.showDim();
         t.setWidth(1.5);
         t.setHeight(5.0);
         t.showDim();
+        System.out.println();
 
-        Triangle2 tr1 = new Triangle2();
-        Triangle2 tr2 = new Triangle2();
-
-        tr1.style = "закрашенный";
-        tr1.setWidth(10.0);
-        tr1.setHeight(10.0);
-
-        tr2.style = "контурный";
-        tr2.setWidth(5.0);
-        tr2.setHeight(5.0);
+        Triangle3 tr1 = new Triangle3("закрашенный", 10.0, 10.0);
+        Triangle3 tr2 = new Triangle3("контурный", 5.0, 5.0);
 
         System.out.println("Инфopмaция о tr1 :");
         tr1.showDim();

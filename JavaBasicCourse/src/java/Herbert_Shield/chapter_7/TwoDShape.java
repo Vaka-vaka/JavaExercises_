@@ -6,7 +6,7 @@
  * @version 1.0 from 20.12.2022
  */
 
-package chapter_7;
+package java.Herbert_Shield.chapter_7;
 
 public class TwoDShape {
     double whidth;

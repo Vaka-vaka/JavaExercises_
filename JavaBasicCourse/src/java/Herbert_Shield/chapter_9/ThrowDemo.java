@@ -5,7 +5,7 @@
  * @version 1.0 from 25.05.2023
  */
 
-package chapter_9;
+package java.Herbert_Shield.chapter_9;
 
 public class ThrowDemo {
     /**

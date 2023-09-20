@@ -5,7 +5,7 @@
  * @version 1.0 from 20.12.2022
  */
 
-package chapter_6;
+package java.Herbert_Shield.chapter_6;
 
 class Sum2 {
     int res;

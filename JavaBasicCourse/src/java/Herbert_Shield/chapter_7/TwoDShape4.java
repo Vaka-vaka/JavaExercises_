@@ -1,15 +1,21 @@
 /**
- * Adding a constructor to the Triangle class
+ * Adding constructors to the TwoDShape4 class
  *
  * @author Valentyn Mozul
  * @version 1.0 from 22.12.2022
  */
 
-package chapter_7;
+package java.Herbert_Shield.chapter_7;
 
-public class TwoDShape3 {
+public class TwoDShape4 {
     private double width; //теперь эти переменные
     private double height; //объявлены как закрытые
+
+    // Параметризированный конструктор
+    TwoDShape4(double w, double h) {  //Конструктор класса TwoDShape4
+        width = w;
+        height = h;
+    }
 
     double getWidth() {
         return width;
@@ -32,12 +38,11 @@ public class TwoDShape3 {
     }
 }
 
-class Triangle3 extends TwoDShape3 {
+class Triangle4 extends TwoDShape4 {
     private String style;
 
-    Triangle3(String s, double w, double h) {
-        setWidth(w);
-        setHeight(h);
+    Triangle4(String s, double w, double h) {
+        super(w, h);  // Использование оператора super() для вызова конструктора класса TwoDShape4
         style = s;
     }
 
@@ -50,22 +55,20 @@ class Triangle3 extends TwoDShape3 {
     }
 }
 
-class TwoDShape3Demo {
+class TwoDShape4Demo {
     /**
      * Program entry point.
      *
      * @param args command Line arguments
      */
     public static void main(String[] args) {
-        TwoDShape3 t = new TwoDShape3();
-        t.showDim();
-        t.setWidth(1.5);
-        t.setHeight(5.0);
+        TwoDShape4 t = new TwoDShape4(1.5, 5.0);
+        System.out.println("Инфopмaция о t :");
         t.showDim();
         System.out.println();
 
-        Triangle3 tr1 = new Triangle3("закрашенный", 10.0, 10.0);
-        Triangle3 tr2 = new Triangle3("контурный", 5.0, 5.0);
+        Triangle4 tr1 = new Triangle4("закрашенный", 10.0, 10.0);
+        Triangle4 tr2 = new Triangle4("контурный", 5.0, 5.0);
 
         System.out.println("Инфopмaция о tr1 :");
         tr1.showDim();
