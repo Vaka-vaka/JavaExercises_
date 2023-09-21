@@ -5,7 +5,7 @@
  * @version 1.0 from 16.01.2023
  */
 
-package chapter_7;
+package java.Herbert_Shield.chapter_7;
 
 public class TwoDShape8 {
     private double width;

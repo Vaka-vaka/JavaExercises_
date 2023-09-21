@@ -5,7 +5,7 @@
  * @version 1.0 from 17.01.2023
  */
 
-package chapter_7;
+package java.Herbert_Shield.chapter_7;
 
 abstract class TwoDShape9 { // Класс TwoDShape теперь абстрактный
     private double width;
