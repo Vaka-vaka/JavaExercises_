@@ -5,7 +5,7 @@
  * @version 1.0 from 23.12.2022
  */
 
-package chapter_7;
+package java.Herbert_Shield.chapter_7;
 
 public class Vehicle implements Ivehicle {
     private int passengers; // количество пассажиров

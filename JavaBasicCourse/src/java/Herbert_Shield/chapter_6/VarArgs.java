@@ -6,7 +6,7 @@
  * @version 1.0 from 08.12.2022
  */
 
-package chapter_6;
+package java.Herbert_Shield.chapter_6;
 
 public class VarArgs {
     //Метод vaTest() допускает переменное число аргументов

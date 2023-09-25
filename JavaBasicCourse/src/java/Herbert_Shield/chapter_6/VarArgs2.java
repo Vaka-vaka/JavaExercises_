@@ -6,7 +6,7 @@
  * @version 1.0 from 09.12.2022
  */
 
-package chapter_6;
+package java.Herbert_Shield.chapter_6;
 
 public class VarArgs2 {
     //Здесь msg - обычный параметр, а v - массив параметров переменной длины

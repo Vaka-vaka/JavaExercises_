@@ -1,4 +1,4 @@
-package chapter_6;
+package java.Herbert_Shield.chapter_6;
 
 public class X {
     int msq(int a, int b) {

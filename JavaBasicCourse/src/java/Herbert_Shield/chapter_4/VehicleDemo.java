@@ -6,7 +6,7 @@
  * @version 1.0
  */
 
-package chapter_4;
+package java.Herbert_Shield.chapter_4;
 
 class VehicleDemo {
     /**
