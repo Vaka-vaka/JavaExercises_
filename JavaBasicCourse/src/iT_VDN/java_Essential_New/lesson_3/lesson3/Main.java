@@ -6,7 +6,7 @@
  * @author Valentyn Mozul
  */
 
-package iT_VDN.java_Essential_New.lesson_3;
+package iT_VDN.java_Essential_New.lesson_3.lesson3;
 
 public class Main {
     /**
