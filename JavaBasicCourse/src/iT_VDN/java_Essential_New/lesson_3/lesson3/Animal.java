@@ -1,6 +1,6 @@
 /**
  * java basic
- * lesson 2
+ * lesson 3
  *
  * @version 1.0 from 2023-12-06
  * @author Valentyn Mozul
