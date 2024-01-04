@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class Fruit {
     private String name;
-    private  int cost;
+    private int cost;
     private boolean isRipe;
 
     public Fruit(String name, int cost, boolean isRipe) {
