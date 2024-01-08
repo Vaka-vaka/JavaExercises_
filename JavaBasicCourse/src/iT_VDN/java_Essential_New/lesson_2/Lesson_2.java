@@ -21,7 +21,7 @@ public class Lesson_2 {
 //        MyClass myClass = new MyClass();
 //        Rectangle rectangle = new Rectangle();
 //        Car car = new Car();
-//        Main main = new Main();
+//        MainException main = new MainException();
 
         Car car = new Car("audi", 2002, "green", "q7");
       //  car.brand = "BMW";

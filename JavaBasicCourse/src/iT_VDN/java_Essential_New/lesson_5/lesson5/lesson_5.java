@@ -17,9 +17,9 @@ public class lesson_5 {
      * @param args command Line arguments
      */
     public static void main(String[] args) {
-       String currentSeason = SPRING;
-       String randomSeason = "asdlklad";
-       printWeather(currentSeason);
+        String currentSeason = SPRING;
+        String randomSeason = "asdlklad";
+        printWeather(currentSeason);
         printWeather(randomSeason);
         printWeather1(Seasons.AUTUMN);
     }
@@ -38,9 +38,9 @@ public class lesson_5 {
         }
     }
 
-    public static void printWeather1 (Seasons seasons) {
+    public static void printWeather1(Seasons seasons) {
         String seasonName = seasons.getName();
-        switch (seasons){
+        switch (seasons) {
             case SPRING:
                 System.out.println(seasonName + ": Тепло і сонячно");
                 break;
