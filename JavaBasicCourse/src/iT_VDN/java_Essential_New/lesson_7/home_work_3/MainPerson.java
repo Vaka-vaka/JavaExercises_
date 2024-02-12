@@ -18,8 +18,6 @@ public class MainPerson {
     public static void main(String[] args) {
         Person person = new Person("John");
         person = null;
-        //person.setName("Naga");
-        //person.introduce();
         try {
             person.introducePerson(person);
         } catch (NullPointerException e) {
