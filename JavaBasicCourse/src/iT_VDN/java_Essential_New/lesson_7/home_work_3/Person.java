@@ -32,4 +32,8 @@ public class Person {
     public void introducePerson(Person person) {
         person.introduce();
     }
+
+    public int divideNumbers(int a, int b) {
+        return a / b;
+    }
 }
