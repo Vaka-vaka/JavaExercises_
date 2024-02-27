@@ -9,7 +9,7 @@
 package iT_VDN.java_Essential_New.lesson_7.home_work_3;
 
 public class ZeroDivisionException extends Exception {
-    ZeroDivisionException (String message) {
+    ZeroDivisionException(String message) {
         super(message);
     }
 }

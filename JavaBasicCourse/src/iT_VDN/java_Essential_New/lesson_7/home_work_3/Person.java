@@ -34,6 +34,7 @@ public class Person {
     }
 
     public int divideNumbers(int a, int b) {
+        //System.out.println(a / b);
         return a / b;
     }
 }
