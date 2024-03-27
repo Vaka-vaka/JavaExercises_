@@ -11,5 +11,5 @@ package iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.constant;
 public enum TaskState {
     TODO,
     IN_PROGRESS,
-    COMPLETE
+    COMPLETED
 }
