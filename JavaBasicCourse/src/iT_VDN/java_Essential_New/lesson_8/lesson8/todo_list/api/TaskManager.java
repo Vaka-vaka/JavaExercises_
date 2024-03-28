@@ -8,17 +8,38 @@
 
 package iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.api;
 
+import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.constant.TaskState;
+import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.InvalidTasksDataException;
+import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.InvalidTasksStateException;
+import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.TaskNotFoundException;
+import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.PersonalTask;
+import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.Task;
+import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.WorkTask;
+
+import java.util.List;
+
 public interface TaskManager {
-    void addTask(String title, String description, TaskState taskState);
-    void addWokTask(String title, String description, TaskState taskState);
-    void addPersonalTask(String title, String description, TaskState taskState);
+    void addTask(String title, String description, TaskState taskState) throws InvalidTasksStateException, InvalidTasksDataException;
+
+    void addWorkTask(String title, String description, TaskState taskState) throws InvalidTasksDataException, InvalidTasksStateException;
+
+    void addPersonalTask(String title, String description, TaskState taskState) throws InvalidTasksDataException, InvalidTasksStateException;
 
     List<Task> getAllTasks();
+
     List<WorkTask> getWorkTasks();
+
     List<PersonalTask> getPersonalTasks();
 
-    void removeTask(int id);
+    void removeTask(int id) throws TaskNotFoundException;
+
     void removeAllTasks();
 
+    void changeTaskStatus(int id, TaskState taskState) throws TaskNotFoundException;
 
+    List<Task> getTasksByStatus(TaskState taskState);
+
+    List<Task> searchTasks(String keyword);
+
+    Task getTaskById(int id);
 }
