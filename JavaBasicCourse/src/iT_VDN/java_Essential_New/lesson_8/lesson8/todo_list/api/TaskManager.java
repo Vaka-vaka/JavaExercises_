@@ -26,7 +26,7 @@ public interface TaskManager {
 
     void addPersonalTask(String title, String description, TaskState taskState) throws InvalidTasksDataException, InvalidTasksStateException;
 
-    void addStudyTask(String title, String description, TaskState taskState);
+    void addStudyTask(String title, String description, TaskState taskState) throws InvalidTasksDataException, InvalidTasksStateException;
 
     List<Task> getAllTasks();
 
