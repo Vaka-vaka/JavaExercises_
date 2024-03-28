@@ -13,6 +13,7 @@ import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.InvalidTas
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.InvalidTasksStateException;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.TaskNotFoundException;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.PersonalTask;
+import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.StudyTask;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.Task;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.WorkTask;
 
@@ -25,11 +26,15 @@ public interface TaskManager {
 
     void addPersonalTask(String title, String description, TaskState taskState) throws InvalidTasksDataException, InvalidTasksStateException;
 
+    void addStudyTask(String title, String description, TaskState taskState);
+
     List<Task> getAllTasks();
 
     List<WorkTask> getWorkTasks();
 
     List<PersonalTask> getPersonalTasks();
+
+    List<StudyTask> getStudyTask();
 
     void removeTask(int id) throws TaskNotFoundException;
 
@@ -42,4 +47,6 @@ public interface TaskManager {
     List<Task> searchTasks(String keyword);
 
     Task getTaskById(int id);
+
+    Task getStudyTaskById(int id);
 }
