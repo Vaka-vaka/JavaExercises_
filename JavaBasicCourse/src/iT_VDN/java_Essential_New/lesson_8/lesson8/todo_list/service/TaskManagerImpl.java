@@ -11,6 +11,7 @@ package iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.service;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.api.TaskManager;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.constant.TaskState;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.EmptyTaskListException;
+import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.IllegalArgumentException;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.InvalidTasksDataException;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.InvalidTasksStateException;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.TaskNotFoundException;
@@ -167,17 +168,24 @@ public class TaskManagerImpl implements TaskManager {
     }
 
     @Override
-    public Task getTaskById(int id) {
+    public Task getTaskById(int id) throws IllegalArgumentException, TaskNotFoundException {
+        if (taskList.isEmpty()) {
+            throw new EmptyTaskListException("Task list is empty!");
+        }
         for (Task task : taskList) {
             if (task.getId() == id) {
                 return task;
             }
         }
-        return null;
+        if (id < 0) {
+            throw new IllegalArgumentException("Id:" + id + " is not negative!");
+        } else {
+            throw new TaskNotFoundException("Task with id: " + id + " not found!");
+        }
     }
 
     @Override
-    public Task getStudyTaskById(int id) {
+    public Task getStudyTaskById(int id) throws IllegalArgumentException, TaskNotFoundException {
         if (taskList.isEmpty()) {
             throw new EmptyTaskListException("Task list is empty!");
         }
@@ -188,7 +196,8 @@ public class TaskManagerImpl implements TaskManager {
                 }
             }
         }
-        // or
+
+/** or */
 //        for (Task task : taskList) {
 //            if (task instanceof StudyTask) {
 //                if (task.getId() == id) {
@@ -196,6 +205,11 @@ public class TaskManagerImpl implements TaskManager {
 //                }
 //            }
 //        }
-        return null;
+
+        if (id < 0) {
+            throw new IllegalArgumentException("Id:" + id + " is not negative!");
+        } else {
+            throw new TaskNotFoundException("Task with id: " + id + " not found!");
+        }
     }
 }
