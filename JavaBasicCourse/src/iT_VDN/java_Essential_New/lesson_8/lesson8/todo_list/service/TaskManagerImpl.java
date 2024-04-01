@@ -29,7 +29,8 @@ public class TaskManagerImpl implements TaskManager {
     public static int taskId = 0;
 
     @Override
-    public void addTask(String title, String description, TaskState taskState) throws InvalidTasksStateException, InvalidTasksDataException {
+    public void addTask(String title, String description, TaskState taskState)
+            throws InvalidTasksStateException, InvalidTasksDataException {
         if (title == null || title.isEmpty()) {
             throw new InvalidTasksDataException("Tasks must have a title!");
         }
@@ -41,7 +42,8 @@ public class TaskManagerImpl implements TaskManager {
     }
 
     @Override
-    public void addWorkTask(String title, String description, TaskState taskState) throws InvalidTasksDataException, InvalidTasksStateException {
+    public void addWorkTask(String title, String description, TaskState taskState)
+            throws InvalidTasksDataException, InvalidTasksStateException {
         if (title == null || title.isEmpty()) {
             throw new InvalidTasksDataException("WorkTasks must have a title!");
         }
@@ -53,7 +55,8 @@ public class TaskManagerImpl implements TaskManager {
     }
 
     @Override
-    public void addPersonalTask(String title, String description, TaskState taskState) throws InvalidTasksDataException, InvalidTasksStateException {
+    public void addPersonalTask(String title, String description, TaskState taskState)
+            throws InvalidTasksDataException, InvalidTasksStateException {
         if (title == null || title.isEmpty()) {
             throw new InvalidTasksDataException("PersonalTasks must have a title!");
         }
@@ -65,7 +68,8 @@ public class TaskManagerImpl implements TaskManager {
     }
 
     @Override
-    public void addStudyTask(String title, String description, TaskState taskState) throws InvalidTasksDataException, InvalidTasksStateException {
+    public void addStudyTask(String title, String description, TaskState taskState)
+            throws InvalidTasksDataException, InvalidTasksStateException {
         if (title == null || title.isEmpty()) {
             throw new InvalidTasksDataException("StudyTask must have a title!");
         }
@@ -138,7 +142,7 @@ public class TaskManagerImpl implements TaskManager {
     @Override
     public void changeTaskStatus(int id, TaskState taskState) throws TaskNotFoundException {
         for (Task task : taskList) {
-            if(task.getId() == id) {
+            if (task.getId() == id) {
                 task.setTaskState(taskState);
                 return; //return
             }
@@ -164,11 +168,34 @@ public class TaskManagerImpl implements TaskManager {
 
     @Override
     public Task getTaskById(int id) {
+        for (Task task : taskList) {
+            if (task.getId() == id) {
+                return task;
+            }
+        }
         return null;
     }
 
     @Override
     public Task getStudyTaskById(int id) {
+        if (taskList.isEmpty()) {
+            throw new EmptyTaskListException("Task list is empty!");
+        }
+        for (int i = 0; i < taskList.size(); i++) {
+            if (taskList.get(i) instanceof StudyTask) {
+                if (taskList.get(i).getId() == id) {
+                    return taskList.get(i);
+                }
+            }
+        }
+        // or
+//        for (Task task : taskList) {
+//            if (task instanceof StudyTask) {
+//                if (task.getId() == id) {
+//                    return task;
+//                }
+//            }
+//        }
         return null;
     }
 }

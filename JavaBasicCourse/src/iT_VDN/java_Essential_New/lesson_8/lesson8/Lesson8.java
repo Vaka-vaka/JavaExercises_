@@ -63,6 +63,9 @@ public class Lesson8 {
                 System.out.println(task);
             }
 
+            System.out.println("------------------------------------");
+            System.out.println("Get Study Task:");
+            System.out.println(taskManager.getStudyTaskById(7));
 
 
         } catch (Exception e) {
