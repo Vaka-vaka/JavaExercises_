@@ -9,10 +9,8 @@
 package iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.api;
 
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.constant.TaskState;
+import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.*;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.IllegalArgumentException;
-import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.InvalidTasksDataException;
-import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.InvalidTasksStateException;
-import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.TaskNotFoundException;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.PersonalTask;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.StudyTask;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.Task;
@@ -45,7 +43,7 @@ public interface TaskManager {
 
     List<Task> getTasksByStatus(TaskState taskState);
 
-    List<Task> searchTasks(String keyword);
+    List<Task> searchTasks(String keyword) throws InvalidSearchTasksException, TaskNotFoundException;
 
     Task getTaskById(int id) throws IllegalArgumentException, TaskNotFoundException;
 

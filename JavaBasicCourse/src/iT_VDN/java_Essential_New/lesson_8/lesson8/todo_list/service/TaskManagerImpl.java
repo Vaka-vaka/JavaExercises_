@@ -10,11 +10,8 @@ package iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.service;
 
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.api.TaskManager;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.constant.TaskState;
-import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.EmptyTaskListException;
+import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.*;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.IllegalArgumentException;
-import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.InvalidTasksDataException;
-import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.InvalidTasksStateException;
-import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.exception.TaskNotFoundException;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.PersonalTask;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.StudyTask;
 import iT_VDN.java_Essential_New.lesson_8.lesson8.todo_list.model.Task;
@@ -27,7 +24,7 @@ import java.util.List;
 public class TaskManagerImpl implements TaskManager {
 
     private final List<Task> taskList = new ArrayList<>();
-    public static int taskId = 0;
+    public static int taskId = 1;
 
     @Override
     public void addTask(String title, String description, TaskState taskState)
@@ -46,10 +43,10 @@ public class TaskManagerImpl implements TaskManager {
     public void addWorkTask(String title, String description, TaskState taskState)
             throws InvalidTasksDataException, InvalidTasksStateException {
         if (title == null || title.isEmpty()) {
-            throw new InvalidTasksDataException("WorkTasks must have a title!");
+            throw new InvalidTasksDataException("Work tasks must have a title!");
         }
         if (taskState == null) {
-            throw new InvalidTasksStateException("WorkTask state cannot be null");
+            throw new InvalidTasksStateException("Work task state cannot be null");
         }
         taskList.add(new WorkTask(taskId, title, description, taskState));
         taskId++;
@@ -59,10 +56,10 @@ public class TaskManagerImpl implements TaskManager {
     public void addPersonalTask(String title, String description, TaskState taskState)
             throws InvalidTasksDataException, InvalidTasksStateException {
         if (title == null || title.isEmpty()) {
-            throw new InvalidTasksDataException("PersonalTasks must have a title!");
+            throw new InvalidTasksDataException("Personal tasks must have a title!");
         }
         if (taskState == null) {
-            throw new InvalidTasksStateException("PersonalTasks state cannot be null");
+            throw new InvalidTasksStateException("Personal tasks state cannot be null");
         }
         taskList.add(new PersonalTask(taskId, title, description, taskState));
         taskId++;
@@ -72,10 +69,10 @@ public class TaskManagerImpl implements TaskManager {
     public void addStudyTask(String title, String description, TaskState taskState)
             throws InvalidTasksDataException, InvalidTasksStateException {
         if (title == null || title.isEmpty()) {
-            throw new InvalidTasksDataException("StudyTask must have a title!");
+            throw new InvalidTasksDataException("Study task must have a title!");
         }
         if (taskState == null) {
-            throw new InvalidTasksStateException("StudyTask state cannot be null");
+            throw new InvalidTasksStateException("Study task state cannot be null");
         }
         taskList.add(new StudyTask(taskId, title, description, taskState));
         taskId++;
@@ -153,15 +150,26 @@ public class TaskManagerImpl implements TaskManager {
 
     @Override
     public List<Task> getTasksByStatus(TaskState taskState) {
-        return null;
+        List<Task> listTask = new ArrayList<>();
+        for (Task task : taskList) {
+            if (task.getTaskState().equals(taskState)) {
+                listTask.add(task);
+            }
+        }
+        return listTask;
     }
 
     @Override
-    public List<Task> searchTasks(String keyword) {
+    public List<Task> searchTasks(String keyword) throws InvalidSearchTasksException, TaskNotFoundException {
+        if (keyword == null || keyword.equals("")) {
+            throw new InvalidSearchTasksException("Search task state cannot be null!");
+        }
         List<Task> foundTasks = new ArrayList<>();
         for (Task task : taskList) {
             if (task.getTitle().contains(keyword) || task.getDescription().contains(keyword)) {
                 foundTasks.add(task);
+//            } else {
+//                throw new TaskNotFoundException("Search tasks: " + keyword + " not found!");
             }
         }
         return foundTasks;
@@ -177,8 +185,8 @@ public class TaskManagerImpl implements TaskManager {
                 return task;
             }
         }
-        if (id < 0) {
-            throw new IllegalArgumentException("Id:" + id + " is not negative!");
+        if (id <= 0) {
+            throw new IllegalArgumentException("Id:" + id + " is not negative or null!");
         } else {
             throw new TaskNotFoundException("Task with id: " + id + " not found!");
         }
@@ -206,8 +214,8 @@ public class TaskManagerImpl implements TaskManager {
 //            }
 //        }
 
-        if (id < 0) {
-            throw new IllegalArgumentException("Id:" + id + " is not negative!");
+        if (id <= 0) {
+            throw new IllegalArgumentException("Id:" + id + " is not negative or null!");
         } else {
             throw new TaskNotFoundException("Task with id: " + id + " not found!");
         }
