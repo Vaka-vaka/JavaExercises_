@@ -128,9 +128,9 @@ public class TaskManagerImpl implements TaskManager {
                 iterator.remove();
                 break;
             }
-//            if (task.getId() <= 0 || task.getId() > id || task.getId() < id) {
-//                throw new TaskNotFoundException("Task with id: " + id + " not found!");
-//            }
+        }
+        if (id == 0 || id < 0 || taskId < id) {
+            throw new TaskNotFoundException("Task with id: " + id + " not found!");
         }
     }
 
@@ -213,16 +213,6 @@ public class TaskManagerImpl implements TaskManager {
                 }
             }
         }
-
-/** or */
-//        for (Task task : taskList) {
-//            if (task instanceof StudyTask) {
-//                if (task.getId() == id) {
-//                    return task;
-//                }
-//            }
-//        }
-
         if (id <= 0) {
             throw new IllegalArgumentException("Id:" + id + " is not negative or null!");
         } else {
