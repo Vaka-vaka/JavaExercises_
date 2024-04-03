@@ -41,9 +41,9 @@ public interface TaskManager {
 
     void changeTaskStatus(int id, TaskState taskState) throws TaskNotFoundException;
 
-    List<Task> getTasksByStatus(TaskState taskState);
+    List<Task> getTasksByStatus(TaskState taskState) throws IllegalArgumentException;
 
-    List<Task> searchTasks(String keyword) throws InvalidSearchTasksException, TaskNotFoundException;
+    List<Task> searchTasks(String keyword) throws InvalidSearchTasksException, SearchTasksNotFoundException;
 
     Task getTaskById(int id) throws IllegalArgumentException, TaskNotFoundException;
 

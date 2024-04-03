@@ -128,8 +128,10 @@ public class TaskManagerImpl implements TaskManager {
                 iterator.remove();
                 break;
             }
+//            if (task.getId() <= 0 || task.getId() > id || task.getId() < id) {
+//                throw new TaskNotFoundException("Task with id: " + id + " not found!");
+//            }
         }
-        throw new TaskNotFoundException("Task with id: " + id + " not found!");
     }
 
     @Override
@@ -149,7 +151,13 @@ public class TaskManagerImpl implements TaskManager {
     }
 
     @Override
-    public List<Task> getTasksByStatus(TaskState taskState) {
+    public List<Task> getTasksByStatus(TaskState taskState) throws IllegalArgumentException {
+        if (taskList.isEmpty()) {
+            throw new EmptyTaskListException("Task list is empty!");
+        }
+        if (taskState == null) {
+            throw new IllegalArgumentException("Tasks by status: " + null + " invalid argument!");
+        }
         List<Task> listTask = new ArrayList<>();
         for (Task task : taskList) {
             if (task.getTaskState().equals(taskState)) {
@@ -160,7 +168,7 @@ public class TaskManagerImpl implements TaskManager {
     }
 
     @Override
-    public List<Task> searchTasks(String keyword) throws InvalidSearchTasksException, TaskNotFoundException {
+    public List<Task> searchTasks(String keyword) throws InvalidSearchTasksException, SearchTasksNotFoundException {
         if (keyword == null || keyword.equals("")) {
             throw new InvalidSearchTasksException("Search task state cannot be null!");
         }
@@ -168,9 +176,10 @@ public class TaskManagerImpl implements TaskManager {
         for (Task task : taskList) {
             if (task.getTitle().contains(keyword) || task.getDescription().contains(keyword)) {
                 foundTasks.add(task);
-//            } else {
-//                throw new TaskNotFoundException("Search tasks: " + keyword + " not found!");
             }
+        }
+        if (foundTasks.isEmpty()) {
+            throw new SearchTasksNotFoundException("Search tasks: " + keyword + " not found!");
         }
         return foundTasks;
     }

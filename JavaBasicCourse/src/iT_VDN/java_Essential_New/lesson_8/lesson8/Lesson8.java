@@ -78,9 +78,23 @@ public class Lesson8 {
 
             System.out.println("--------------------------------------");
             System.out.println("Search tasks by status");
+            System.out.println(taskManager.getTasksByStatus(TaskState.COMPLETED));
+
+            System.out.println("--------------------------------------");
+            System.out.println("Change Task Status");
+            taskManager.changeTaskStatus(2, TaskState.TODO);
+            System.out.println("---TODO---");
             System.out.println(taskManager.getTasksByStatus(TaskState.TODO));
 
-
+            System.out.println("--------------------------------------");
+            List<Task> taskList1 = taskManager.getAllTasks();
+            System.out.println("All tasks:");
+            for (Task task : taskList1) {
+                System.out.println(task);
+            }
+            System.out.println("Remove Tasks:");
+            taskManager.removeTask(2);
+            System.out.println(taskManager.getAllTasks());
         } catch (Exception e) {
             e.printStackTrace();
         }
