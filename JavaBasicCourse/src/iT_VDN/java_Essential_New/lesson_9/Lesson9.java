@@ -8,6 +8,8 @@
 
 package iT_VDN.java_Essential_New.lesson_9;
 
+import iT_VDN.java_Essential_New.lesson_9.lesson9.FileManager;
+
 import java.util.Scanner;
 
 public class Lesson9 {
@@ -17,7 +19,13 @@ public class Lesson9 {
      * @param args command Line arguments
      */
     public static void main(String[] args) {
-        greetUser();
+//        greetUser();
+        String basePath = "src/iT_VDN/java_Essential_New/lesson_9/lesson9";
+        FileManager fileManager = new FileManager(basePath);
+        String directoryName = "container";
+        String fileName = "data.txt";
+        fileManager.createDirectory(directoryName);
+        fileManager.createFile(directoryName, fileName);
     }
 
     public static void greetUser() {
