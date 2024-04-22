@@ -20,7 +20,7 @@ public class Lesson9 {
      */
     public static void main(String[] args) {
 //        greetUser();
-        String basePath = "src/iT_VDN/java_Essential_New/lesson_9/lesson9";
+        String basePath = "W:\\IT\\Intelli IDEA(save projects)\\JavaExercises\\JavaBasicCourse\\src\\iT_VDN\\java_Essential_New\\lesson_9";
         FileManager fileManager = new FileManager(basePath);
         String directoryName = "container";
         String fileName = "data.txt";

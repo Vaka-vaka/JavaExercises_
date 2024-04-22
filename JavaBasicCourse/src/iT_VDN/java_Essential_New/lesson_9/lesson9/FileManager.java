@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class FileManager {
 
-    private String basePath;
+    private final String basePath;
 
     public FileManager(String basePath) {
         this.basePath = basePath;
