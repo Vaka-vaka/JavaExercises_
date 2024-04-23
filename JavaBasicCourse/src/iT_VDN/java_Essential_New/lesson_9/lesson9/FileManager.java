@@ -73,4 +73,41 @@ public class FileManager {
             e.printStackTrace();
         }
     }
+
+    public void copyFile(String sourceFile, String destinationDirectoryName) {
+
+        FileInputStream fileInputStream = null;
+        FileOutputStream fileOutputStream = null;
+
+        try {
+            File file = new File(basePath, sourceFile);
+            File destinationDirectory = new File(basePath, destinationDirectoryName);
+            File destinationFile = new File(destinationDirectory, sourceFile);
+
+            fileInputStream = new FileInputStream(file);
+            fileOutputStream = new FileOutputStream(destinationFile);
+
+            byte[] buffer = new byte[1024];
+
+            int byteRead;
+            while ((byteRead = fileInputStream.read(buffer)) != -1) {
+                fileOutputStream.write(buffer, 0, byteRead);
+            }
+            System.out.println("Файл " + sourceFile + " успішно скопійовано в директорію "
+                    + destinationDirectoryName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (fileInputStream != null) {
+                    fileInputStream.close();
+                }
+                if (fileOutputStream != null) {
+                    fileOutputStream.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
