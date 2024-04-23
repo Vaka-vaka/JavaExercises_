@@ -20,12 +20,14 @@ public class Lesson9 {
      */
     public static void main(String[] args) {
 //        greetUser();
-        String basePath = "W:\\IT\\Intelli IDEA(save projects)\\JavaExercises\\JavaBasicCourse\\src\\iT_VDN\\java_Essential_New\\lesson_9";
+        String basePath = "W:/IT/Intelli IDEA(save projects)/JavaExercises/JavaBasicCourse/src/iT_VDN/java_Essential_New/lesson_9/lesson9/";
         FileManager fileManager = new FileManager(basePath);
         String directoryName = "container";
         String fileName = "data.txt";
         fileManager.createDirectory(directoryName);
         fileManager.createFile(directoryName, fileName);
+        fileManager.writeTextToFile(directoryName, fileName, "Тестові дані!\n" + "Hello!\n" + "How are you?");
+        fileManager.readTextFromFile(directoryName, fileName);
     }
 
     public static void greetUser() {

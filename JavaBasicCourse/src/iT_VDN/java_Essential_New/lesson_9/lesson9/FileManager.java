@@ -8,8 +8,7 @@
 
 package iT_VDN.java_Essential_New.lesson_9.lesson9;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 public class FileManager {
 
@@ -44,6 +43,34 @@ public class FileManager {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    public void writeTextToFile(String directoryName, String fileName, String content) {
+        try {
+            File file = new File(basePath + directoryName, fileName);
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write(content);
+            fileWriter.close();
+            System.out.println("Дані успішно записані у файл " + fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void readTextFromFile(String directoryName, String fileName) {
+        try {
+            File file = new File(basePath + directoryName, fileName);
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            System.out.println("Файл " + fileName + " - успішно прочитано!\n" + "Дивися текст:");
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }
+            fileReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
