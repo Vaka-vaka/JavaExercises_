@@ -28,6 +28,7 @@ public class Lesson9 {
         fileManager.createFile(directoryName, fileName);
         fileManager.writeTextToFile(directoryName, fileName, "Тестові дані!\n" + "Hello!\n" + "How are you?");
         fileManager.readTextFromFile(directoryName, fileName);
+        fileManager.copyFile("img.png", directoryName);
     }
 
     public static void greetUser() {
