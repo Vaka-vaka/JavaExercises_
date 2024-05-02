@@ -18,7 +18,8 @@ public class MainCopyFile {
 
         String basePathInp = "W:/IT/Intelli IDEA(save projects)/JavaExercises/JavaBasicCourse/" +
                 "src/iT_VDN/java_Essential_New/lesson_9/lesson9/container";
-        String basePathOut = "W:/IT/Intelli IDEA(save projects)/JavaExercises/JavaBasicCourse/src/iT_VDN/java_Essential_New/lesson_9/home_work/";
+        String basePathOut = "W:/IT/Intelli IDEA(save projects)/JavaExercises/JavaBasicCourse/" +
+                "src/iT_VDN/java_Essential_New/lesson_9/home_work/";
 
         CopyFile copyF = new CopyFile(basePathInp, basePathOut);
         String sourceFile = "img.png";
