@@ -31,7 +31,13 @@ public class CreateFileNew {
 
             File file = new File(strPath +
                     strName + " .txt");
-            file.createNewFile();
+            if (file.exists()) {
+                System.out.println("Файл " + strName + " вже існує!");
+            } else {
+                if (file.createNewFile()) {
+                    System.out.println("Файл " + strName + " створено успішно!");
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
