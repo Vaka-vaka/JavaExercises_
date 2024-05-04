@@ -17,6 +17,8 @@ public class CreateFileNew {
     public void newFile() {
         String strPath = "", strName = "";
 
+        //W:/IT/Intelli IDEA(save projects)/JavaExercises/JavaBasicCourse/src/iT_VDN/java_Essential_New/lesson_9/home_work/home_work_7/
+
         try {
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(System.in));
@@ -27,7 +29,7 @@ public class CreateFileNew {
 
             strPath = br.readLine();
 
-            File file = new File(  strPath +
+            File file = new File(strPath +
                     strName + " .txt");
             file.createNewFile();
         } catch (IOException e) {
@@ -35,6 +37,3 @@ public class CreateFileNew {
         }
     }
 }
-
-// W:/IT/Intelli IDEA(save projects)/JavaExercises/JavaBasicCourse/" +
-//                    "src/iT_VDN/java_Essential_New/lesson_9/home_work/home_work_7/
