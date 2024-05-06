@@ -17,5 +17,8 @@ public class MainCreateFileNew {
     public static void main(String[] args) {
         CreateFileNew createFileNew1 = new CreateFileNew();
         createFileNew1.newFile();
+
+        CreateFileNew2 createFileNew2 = new CreateFileNew2();
+        createFileNew2.newFile();
     }
 }
