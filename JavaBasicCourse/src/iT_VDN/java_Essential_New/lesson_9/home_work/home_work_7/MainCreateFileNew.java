@@ -16,9 +16,23 @@ public class MainCreateFileNew {
      */
     public static void main(String[] args) {
         CreateFileNew createFileNew1 = new CreateFileNew();
-        createFileNew1.newFile();
+        //createFileNew1.newFile();
 
         CreateFileNew2 createFileNew2 = new CreateFileNew2();
-        createFileNew2.newFile();
+        //createFileNew2.newFile();
+
+        String basePath = "W:/IT/Intelli IDEA(save projects)/JavaExercises/JavaBasicCourse/" +
+                "src/iT_VDN/java_Essential_New/lesson_9/home_work/home_work_5/input.txt";
+        BufferedReaderNew bufferedReaderNew = new BufferedReaderNew(basePath);
+        //bufferedReaderNew.bufferedReaderNewMethod();
+
+        FileReaderNew fileReaderNew = new FileReaderNew(basePath);
+        //fileReaderNew.fileReaderNewMethod();
+
+        ReadFromFileUsingScanner scanner = new ReadFromFileUsingScanner(basePath);
+        //scanner.readFromFileUsingScannerMethod();
+
+        ReadingEntireFileWithoutLoop entireFileWithoutLoop = new ReadingEntireFileWithoutLoop(basePath);
+        entireFileWithoutLoop.readingEntireFileWithoutLoopMethod();
     }
 }
