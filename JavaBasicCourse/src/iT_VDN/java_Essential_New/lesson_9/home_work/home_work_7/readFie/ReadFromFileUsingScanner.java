@@ -6,27 +6,29 @@
  * @author Valentyn Mozul
  */
 
-package iT_VDN.java_Essential_New.lesson_9.home_work.home_work_7;
+package iT_VDN.java_Essential_New.lesson_9.home_work.home_work_7.readFie;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Scanner;
 
-public class ReadingEntireFileWithoutLoop {
+public class ReadFromFileUsingScanner {
+
     private final String basePath;
 
-    public ReadingEntireFileWithoutLoop(String basePath) {
+    public ReadFromFileUsingScanner(String basePath) {
         this.basePath = basePath;
     }
 
-    public void readingEntireFileWithoutLoopMethod() {
+    public void readFromFileUsingScannerMethod() {
         File file = new File(basePath);
 
         try {
             Scanner scanner = new Scanner(file);
-            scanner.useDelimiter("\\Z");
-            System.out.println(scanner.next());
-        } catch (IOException e) {
+
+            while (scanner.hasNextLine()) {
+                System.out.println(scanner.nextLine());
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -6,7 +6,7 @@
  * @author Valentyn Mozul
  */
 
-package iT_VDN.java_Essential_New.lesson_9.home_work.home_work_7;
+package iT_VDN.java_Essential_New.lesson_9.home_work.home_work_7.createFile;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
@@ -29,7 +29,7 @@ public class CreateFileNew2 {
             strFilePath = br.readLine();
 
             FileOutputStream fileOutputStream = new FileOutputStream(
-                    strFilePath + "" + strFileName + " .txt");
+                    strFilePath + "" + strFileName + ".txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
